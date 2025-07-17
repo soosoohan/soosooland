@@ -108,26 +108,6 @@
         word-wrap: break-word;
     }
 
-    .credits-area {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        color: #f0f8ff;
-        font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-        line-height: 1.3;
-        text-align: right;
-        z-index: 50;
-    }
-
-    .credits-item {
-        margin-bottom: 3px;
-        transform: rotate(-1deg);
-    }
-
-    .credits-item:nth-child(2) {
-        transform: rotate(0.5deg);
-    }
-
     /* 모바일 최적화 */
     @media (max-width: 768px) {
         body {
@@ -143,10 +123,7 @@
             padding: 15px;
         }
 
-        .credits-area {
-            bottom: 5px;
-            right: 5px;
-        }
+       
     }
 
     /* 매우 작은 화면 */
@@ -195,11 +172,28 @@
             <div class="game-card-header">
                 <div class="game-emoji"></div>
                 <div class="soo-title">
-<br>한수수가 만든 게임들의 데모 버전을 이곳에 모아두었습니다.<br><br>수수랜드 영업시간은 매주 토요일 오전 9시부터 12시까지입니다.<br><br>
+<br>수수랜드 영업시간은 매주 토요일 오전 9시부터 12시까지입니다.<br><br>
 관심 있는 게임을 클릭해 체험해보세요!<br><br>
 의견이나 개선 제안은 언제든지 아래 이메일로 보내주세요.<br><br>
 
-📧 gkstmxpffk@naver.com
+
+
+<p>
+  <span id="email" style="font-family:monospace;">gkstmxpffk@naver.com</span>
+  <button onclick="copyEmail()" style="
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #2e8b8b;
+  background-color: #2e8b8b;
+  color: white;
+  cursor: pointer;
+  min-width: 80px;
+  transition: background-color 0.3s;
+">
+  이메일주소 복사 버튼
+</button>
+</p>
              </div>
             </div>
         </div>
@@ -211,7 +205,7 @@
                 <div class="game-emoji">🔢</div>
                 <div class="game-title">넘즐 (NUMZZLE)</div>
             </div>
-            <div class="game-difficulty">수학 • 계산</div>
+            <div class="game-difficulty">게임 시작 </div>
             <div class="game-description-text">
                 숫자 카드로 목표값에 가까운 수식을 만드는 수학 게임! 두뇌 개발 보장!<br>
                 A math card game to build formulas close to the target number! Brain power guaranteed!
@@ -219,7 +213,7 @@
             <div class="game-features">
                 • 4가지 난이도 (넘즐초,넘즐잼, 넘즐, 넘즐업)<br>
                 • 연습모드와 실전모드가 있음<br>
-                • 10라운드 승부
+                • 연산 능력과 논리력 향상<br>
             </div>
         </div>
 
@@ -228,13 +222,13 @@
                 <div class="game-emoji">📝</div>
                 <div class="game-title">워퍼즈(WORPUZZ)</div>
             </div>
-            <div class="game-difficulty">어휘력, 추리력</div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 똑똑해진 컴퓨터와 퍼즐 대결! 재미와 어휘력 두 마리 토끼 잡기 보장!<br>
                 Battle a smarter computer! Boost your vocabulary and enjoy the challenge!
             </div>
             <div class="game-features">
-                • 한국어와 영어로 가능<br>
+                • 어휘력과 추리역 향상<br>
                 • 음성상징어 사자성어 고사성어<br>
                 • 옥스포드 사전의 난이도별로 영어 단어 있음
             </div>
@@ -245,14 +239,14 @@
                 <div class="game-emoji">📚</div>
                 <div class="game-title">모음퀴즈<br>(Moeum Quiz)</div>
             </div>
-            <div class="game-difficulty">어휘력, 추리력</div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 모음만 있는 문장에서 힌트를 보고 자음을 넣어 문장을 완성하는 게임. 웃음 보장!<br>
                 A Korean puzzle game where vowels guide you to the answer!
             </div>
             <div class="game-features">
                 • 계속 업그레이드 중<br>
-                • 초성퀴즈와 비슷함<br>
+                • 어휘력과 추리력 향상<br>
                 • 주제가 다양함
             </div>
         </div>
@@ -262,7 +256,7 @@
                 <div class="game-emoji">✨</div>
                 <div class="game-title">트링클 <br>(TRINKLE)</div>
             </div>
-            <div class="game-difficulty">기하 수학</div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 별을 이어 삼각형을 만드는 우주 땅따먹기 전략 게임! 재미 보장!<br>
                 A space strategy game where you connect stars to make triangles! Fun guaranteed!
@@ -270,7 +264,7 @@
             <div class="game-features">
                 • 시각적 패턴 인식<br>
                 • npc와 대결할 수 있고 친구와 같이 하기도 가능<br>
-                • 바둑, 장기,체스 처럼 예지력 향상
+                • 예측력과 전략적 사고력 향상
             </div>
         </div>
 
@@ -279,7 +273,7 @@
                 <div class="game-emoji">🎯</div>
                 <div class="game-title">워퍼즈메이트(Worpuzz Mate)</div>
             </div>
-            <div class="game-difficulty">어휘력 추리력 </div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 친구와 같이 하는 단어 찾기 게임! 두근두근 보장!<br>
                 A word puzzle game to play with a friend! Thrills guaranteed!
@@ -296,13 +290,14 @@
                 <div class="game-emoji">➕</div>
                 <div class="game-title">넘즐 X<br>(NUMZZLE X)</div>
             </div>
-            <div class="game-difficulty">수학 연산</div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 각 라운드마다 주어진 숫자와 연산기호 카드로 수식을 만들어 10라운드가 끝났을 때 승패가 결정되는 게임.<br>
                 A 10-round game where players create math expressions using number and operator cards, with the winner decided at the end.
             </div>
             <div class="game-features">
-                • Maxi는 최대값, Mini 는 최소값을 만들어야 이김
+                • Maxi는 최대값, Mini 는 최소값을 만들어야 이김<br>
+                        •수학 연산능력과 논리력 향상
                            </div>
         </div>
 
@@ -311,15 +306,15 @@
             <div class="game-emoji">🔢</div>
                 <div class="game-title">넘플 (NUMPPLE)</div>
             </div>
-            <div class="game-difficulty">수학 • 계산</div>
+            <div class="game-difficulty">게임 시작</div>
             <div class="game-description-text">
                 숫자 카드로 목표값에 가까운 수식을 만드는 수학 게임! 두뇌 개발 보장!<br>
                 A math card game to build formulas close to the target number! Brain power guaranteed!
             </div>
             <div class="game-features">
                 • 3가지 난이도 (넘즐초,넘즐잼, 넘즐)<br>
-                • 사용자 두명이 운과 실력으로 대결함 <br>
-                • 10라운드 승부
+                • 수 읽기 능력 향상 <br>
+                • 수학 연산 능력 향상
             </div>
             </div>
 
@@ -349,6 +344,16 @@
                             </div>
         </div>
 
+<script>
+  function copyEmail() {
+    const email = document.getElementById("email").innerText;
+    navigator.clipboard.writeText(email).then(() => {
+      alert("이메일 주소가 복사되었습니다!");
+    }).catch(err => {
+      alert("복사에 실패했어요. 수동으로 복사해 주세요.");
+    });
+  }
+</script>
 
 </body>
 </html>
