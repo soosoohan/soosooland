@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="ko">
-<head><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YZHC1G9FN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4YZHC1G9FN');
-    </script>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수수허브</title>
+    <title>수수허브 </title>
     <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
@@ -30,6 +22,7 @@
         padding: 20px;
         overflow-y: auto;
     }
+
     .games-hub {
         max-width: 1200px;
         margin: 0 auto;
@@ -43,11 +36,31 @@
         color: #f0f8ff;
     }
 
-    .hub-subtitle {
+    .language-toggle {
         text-align: center;
-        font-size: clamp(1rem, 2.5vw, 1.2rem);
         margin-bottom: 30px;
-        color: #add8e6;
+    }
+
+    .language-btn {
+        background: rgba(255,255,255,0.2);
+        color: #f0f8ff;
+        border: 2px solid rgba(255,255,255,0.3);
+        padding: 8px 16px;
+        margin: 0 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .language-btn.active {
+        background: rgba(255,255,255,0.9);
+        color: #2e8b8b;
+        border-color: rgba(255,255,255,0.9);
+    }
+
+    .language-btn:hover {
+        background: rgba(255,255,255,0.3);
     }
 
     .games-grid {
@@ -70,6 +83,14 @@
         box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
+    .info-card {
+        cursor: default;
+    }
+
+    .info-card:hover {
+        transform: none;
+    }
+
     .game-card-header {
         display: flex;
         align-items: center;
@@ -87,9 +108,6 @@
         color: #2e8b8b;
         word-wrap: break-word;
     }
-.soo-title {
-        font-size: clamp(1.15rem, 3.05vw, 1.18rem);
-        }
 
     .game-description-text {
         color: #333;
@@ -109,10 +127,37 @@
         margin-bottom: 10px;
     }
 
-.github-feedback {
-  font-size: clamp(0.9rem, 2.2vw, 1rem);
-}
-    /* 모바일 최적화 */
+    .copy-btn {
+        font-size: 0.9rem;
+        padding: 6px 14px;
+        border-radius: 10px;
+        border: 1.5px solid #2e8b8b;
+        background-color: #2e8b8b;
+        color: white;
+        cursor: pointer;
+        min-width: 80px;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+    }
+
+    .copy-btn:hover {
+        background-color: #236b6b;
+    }
+
+    .github-link {
+        color: #2e8b8b;
+        text-decoration: none;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+    }
+
+    .github-link:hover {
+        text-decoration: underline;
+    }
+
+    .hidden {
+        display: none;
+    }
+
     @media (max-width: 768px) {
         body {
             padding: 10px;
@@ -126,18 +171,14 @@
         .game-card {
             padding: 15px;
         }
-
-       
     }
 
-    /* 매우 작은 화면 */
     @media (max-width: 480px) {
         .hub-title {
             margin-top: 20px;
         }
     }
 
-    /* 가로 모드 모바일 */
     @media (max-height: 500px) and (orientation: landscape) {
         body {
             min-height: auto;
@@ -146,11 +187,6 @@
         .hub-title {
             font-size: 2rem;
             margin-bottom: 15px;
-        }
-
-        .hub-subtitle {
-            font-size: 1rem;
-            margin-bottom: 20px;
         }
 
         .games-grid {
@@ -162,169 +198,226 @@
         }
     }
 </style>
-
+```
 
 </head>
 <body>
     <div class="games-hub">
-        <h1 class="hub-title">수수허브 – 데모 게임 모음
-</h1>
+        <h1 class="hub-title">수수허브 – 데모 게임 모음</h1>
 
+
+    <div class="language-toggle">
+        <button class="language-btn active" onclick="setLanguage('ko')">한국어</button>
+        <button class="language-btn" onclick="setLanguage('en')">English</button>
+    </div>
 
     <div class="games-grid">
-
-
-
-<div class="game-card" >
+        <!-- 소개 카드 -->
+        <div class="game-card info-card">
             <div class="game-card-header">
                 <div class="game-emoji">🌱</div>
-                <div class="game-title">수수랜드</div>
+                <div class="game-title">
+                    <span class="ko-text">수수랜드</span>
+                    <span class="en-text hidden">Soosoo Land</span>
+                </div>
             </div>
             <div class="game-description-text">
-
-게임하며 공부하는 수수허브입니다.  <br>
-관심 있는 게임을 클릭해 체험해보세요!<br>
-의견이나 개선 제안은  언제든지 아래 이메일로 보내주세요.<br>
-<br>
+                <div class="ko-text">
+                    게임하며 공부하는 수수랜드입니다.<br>
+                    관심 있는 게임을 클릭해 체험해보세요!<br>
+                    의견이나 개선 제안은 언제든지 아래 이메일로 보내주세요.<br><br>
+                    <span style="font-family:monospace;">gkstmxpffk@naver.com</span>
+                    <button class="copy-btn" onclick="copyEmail()">이메일 복사</button><br><br>
+                    <a href="https://github.com/soosoohan/soosooland/issues" class="github-link">
+                        💬 깃허브에 의견 남기기
+                    </a>
+                </div>
+                <div class="en-text hidden">
+                    Welcome to Soosoo Land where you learn while playing!<br>
+                    Click on any game you're interested in to try it out!<br>
+                    Feel free to send feedback or suggestions to the email below.<br><br>
+                    <span style="font-family:monospace;">gkstmxpffk@naver.com</span>
+                    <button class="copy-btn" onclick="copyEmail()">Copy Email</button><br><br>
+                    <a href="https://github.com/soosoohan/soosooland/issues" class="github-link">
+                        💬 Leave feedback on GitHub
+                    </a>
+                </div>
             </div>
-            <div class="game-features">
-            
-  <span id="email" style="font-family:monospace;">gkstmxpffk@naver.com</span>
- <button onclick="copyEmail()" style="
-  font-size: 0.9rem;
-  padding: 6px 14px;
-  border-radius: 10px;
-  border: 1.5px solid #2e8b8b;
-  background-color: #2e8b8b;
-  color: white;
-  cursor: pointer;
-  min-width: 80px;
-  transition: background-color 0.3s;
-">
-  이메일주소 복사 버튼
-</button><br>
-<br>
-<a href="https://github.com/soosoohan/soosooland/issues" class="github-feedback">
-   💬 깃허브에 의견 남기기
-</a>    
-</div>
         </div>
 
-<div class="game-card" onclick="location.href='https://numzzle.vercel.app'">
+        <!-- 넘즐 게임 -->
+        <div class="game-card" onclick="location.href='https://numzzle.vercel.app'">
             <div class="game-card-header">
                 <div class="game-emoji">🔢</div>
-                <div class="game-title">넘즐 (NUMZZLE)</div>
+                <div class="game-title">
+                    <span class="ko-text">넘즐 시리즈(NUMZZLE)</span>
+                    <span class="en-text hidden">NUMZZLE Series</span>
+                </div>
             </div>
-            <div class="game-difficulty">게임 시작 </div>
+            <div class="game-difficulty">
+                <span class="ko-text">게임 시작</span>
+                <span class="en-text hidden">Start Game</span>
+            </div>
             <div class="game-description-text">
-                숫자 카드로 목표값에 가까운 수식을 만드는 수학 게임! 두뇌 개발 보장!<br>
-                A math card game to build formulas close to the target number! Brain power guaranteed!<br>4가지 난이도로 초등학교 저학년부터  가능<br>
-                연습모드와 실전모드가 있음<br>
-                연산 능력과 논리력 향상<br>
+                <div class="ko-text">
+                    숫자 카드와 연산카드로 수식을 만든다<br>
+                    결과값을 목표숫자, 최대값, 최소값 중에서 고를 수 있음<br>
+                    연산 능력과 논리력 향상<br>
+                </div>
+                <div class="en-text hidden">
+                    Create equations using number and operation cards<br>
+                    Choose from target number, maximum, or minimum values<br>
+                    Improves arithmetic skills and logical thinking<br>
+                </div>
             </div>
         </div>
         
-<div class="game-card" onclick="location.href='https://worpuzz.vercel.app'">
+        <!-- 워퍼즈 게임 -->
+        <div class="game-card" onclick="location.href='https://worpuzz.vercel.app'">
             <div class="game-card-header">
                 <div class="game-emoji">📚</div>
-                <div class="game-title">워퍼즈 시리즈(WORPUZZ)</div>
+                <div class="game-title">
+                    <span class="ko-text">워퍼즈 시리즈(WORPUZZ)</span>
+                    <span class="en-text hidden">WORPUZZ Series</span>
+                </div>
             </div>
-            <div class="game-difficulty">게임 시작</div>
+            <div class="game-difficulty">
+                <span class="ko-text">게임 시작</span>
+                <span class="en-text hidden">Start Game</span>
+            </div>
             <div class="game-description-text">
-                격자속에 숨어있는 글자를 찾는 게임 <br>
-                재미와 어휘력 집중력 추리력 향상!<br>
-                친구와  대결하거나 컴퓨터와 대결할 수 있음<br>
-                음성상징어 사자성어 고사성어  사자숙어 등 다양한  한글 단어 있음<br>
-                옥스포드 사전의 난이도별로 영어 단어 있음<br>
-                격자의 크기 3가지 중에서 고를 수 있음 
+                <div class="ko-text">
+                    격자속에 숨어있는 글자를 찾는 게임<br>
+                    재미와 어휘력 집중력 추리력 향상!<br>
+                    친구와 대결하거나 컴퓨터와 대결할 수 있음<br>
+                    격자의 크기 3가지 중에서 고를 수 있음
+                </div>
+                <div class="en-text hidden">
+                    Find hidden letters in the grid<br>
+                    Fun way to improve vocabulary, focus, and deduction!<br>
+                    Play against friends or computer<br>
+                    Choose from 3 different grid sizes
+                </div>
             </div>
         </div>
 
-
+        <!-- 모음퀴즈 게임 -->
         <div class="game-card" onclick="location.href='https://moeum-quiz.vercel.app'">
             <div class="game-card-header">
                 <div class="game-emoji">📚</div>
-                <div class="game-title">모음퀴즈<br>(Moeum Quiz)</div>
+                <div class="game-title">
+                    <span class="ko-text">모음퀴즈<br>(Moeum Quiz)</span>
+                    <span class="en-text hidden">Moeum Quiz<br>(Vowel Puzzle)</span>
+                </div>
             </div>
-            <div class="game-difficulty">게임 시작</div>
+            <div class="game-difficulty">
+                <span class="ko-text">게임 시작</span>
+                <span class="en-text hidden">Start Game</span>
+            </div>
             <div class="game-description-text">
-                모음만 있는 문장에서 힌트를 보고 자음을 넣어 문장을 완성하는 게임. 웃음 보장!<br>
-                A Korean puzzle game where vowels guide you to the answer!
-            어휘력과 추리력 향상<br>
-                주제가 다양함
+                <div class="ko-text">
+                    모음만 있는 문장에서 힌트를 보고 자음을 넣어 문장을 완성하는 게임.<br>
+                    상식과 어휘력과 추리력 향상<br>
+                </div>
+                <div class="en-text hidden">
+                    A Korean puzzle game where vowels guide you to the answer!<br>
+                    Complete sentences by adding consonants using hints.<br>
+                    Improves general knowledge, vocabulary, and deduction<br>
+                </div>
             </div>
         </div>
 
+        <!-- 트링클 게임 -->
         <div class="game-card" onclick="location.href='https://trinkle-opal.vercel.app'">
             <div class="game-card-header">
                 <div class="game-emoji">✨</div>
-                <div class="game-title">트링클 <br>(TRINKLE)</div>
+                <div class="game-title">
+                    <span class="ko-text">트링클<br>(TRINKLE)</span>
+                    <span class="en-text hidden">TRINKLE<br>(Space Strategy)</span>
+                </div>
             </div>
-            <div class="game-difficulty">게임 시작</div>
+            <div class="game-difficulty">
+                <span class="ko-text">게임 시작</span>
+                <span class="en-text hidden">Start Game</span>
+            </div>
             <div class="game-description-text">
-                별을 이어 삼각형을 만드는 우주 땅따먹기 전략 게임! 재미 보장!<br>
-                A space strategy game where you connect stars to make triangles! Fun guaranteed!<br>
-            시각적 패턴 인식<br>
-                npc와 대결할 수 있고 친구와 같이 하기도 가능<br>
-                예측력과 전략적 사고력 향상
+                <div class="ko-text">
+                    별을 이어 삼각형을 만드는 우주 땅따먹기 전략 게임!<br>
+                    시각적 패턴 인식<br>
+                    npc와 대결하거나 친구와 같이 하기도 가능<br>
+                    예측력과 전략적 사고력 향상
+                </div>
+                <div class="en-text hidden">
+                    A space strategy game where you connect stars to make triangles!<br>
+                    Visual pattern recognition<br>
+                    Play against AI or with friends<br>
+                    Improves prediction and strategic thinking
+                </div>
             </div>
         </div>
 
-
-        <div class="game-card" onclick="location.href='https://numzzlex.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">🔢</div>
-                <div class="game-title">넘즐 X<br>(NUMZZLE X)</div>
-            </div>
-            <div class="game-difficulty">게임 시작</div>
+        <!-- 크레딧 카드 -->
+        <div class="game-card info-card">
             <div class="game-description-text">
-                각 라운드마다 주어진 숫자와 연산기호 카드로 수식을 만들어 10라운드가 끝났을 때 승패가 결정되는 게임.<br>
-                A 10-round game where players create math expressions using number and operator cards, with the winner decided at the end.<br>
-              넘즐보다 쉬움<br>          수학 연산능력과 논리력 향상
-                           </div>
-        </div>
-
-<div class="game-card" onclick="location.href='https://numpple.vercel.app'">
-                <div class="game-card-header">
-            <div class="game-emoji">🔢</div>
-                <div class="game-title">넘플 (NUMPPLE)</div>
+                <div class="ko-text">
+                    <p>기획·개발 : 한수수</p>
+                    <p>디자인 도움: 네이처리</p>
+                    <p>© 2025 Soosoo Han.</p>
+                    <p>All rights reserved.</p>
+                </div>
+                <div class="en-text hidden">
+                    <p>Planning & Development: Soosoo Han</p>
+                    <p>Design Support: Nature Lee</p>
+                    <p>© 2025 Soosoo Han.</p>
+                    <p>All rights reserved.</p>
+                </div>
             </div>
-            <div class="game-difficulty">게임 시작</div>
-            <div class="game-description-text">
-                숫자 카드로 목표값에 가까운 수식을 만드는 수학 게임! 두뇌 개발 보장!<br>
-                A math card game to build formulas close to the target number! Brain power guaranteed!<br>3가지 난이도 (넘즐초,넘즐잼, 넘즐)<br>
-                수 읽기 능력과 수학 연산 능력 향상
-            </div>
-            </div>
-
-
-
-<div class="game-card">
-                  <p>기획·개발 : 한수수</p>
-    <p>디자인 도움: 네이처리</p>
-    <p>© 2025 한수수</p>
-    <p>© 2025 Soosoo Han.</p><p> All rights reserved.</p>
-        </div>
-                
-    
-
-
         </div>
     </div>
-                            </div>
-        </div>
+</div>
 
 <script>
-  function copyEmail() {
-    const email = document.getElementById("email").innerText;
-    navigator.clipboard.writeText(email).then(() => {
-      alert("이메일 주소가 복사되었습니다!");
-    }).catch(err => {
-      alert("복사에 실패했어요. 수동으로 복사해 주세요.");
-    });
-  }
+    function setLanguage(lang) {
+        const koTexts = document.querySelectorAll('.ko-text');
+        const enTexts = document.querySelectorAll('.en-text');
+        const koBtns = document.querySelector('.language-btn:first-child');
+        const enBtns = document.querySelector('.language-btn:last-child');
+
+        if (lang === 'ko') {
+            koTexts.forEach(el => el.classList.remove('hidden'));
+            enTexts.forEach(el => el.classList.add('hidden'));
+            koBtns.classList.add('active');
+            enBtns.classList.remove('active');
+            document.title = '수수허브';
+            document.querySelector('.hub-title').textContent = '수수허브 – 데모 게임 모음';
+        } else {
+            koTexts.forEach(el => el.classList.add('hidden'));
+            enTexts.forEach(el => el.classList.remove('hidden'));
+            koBtns.classList.remove('active');
+            enBtns.classList.add('active');
+            document.title = 'Soosoo\'s Game Terminal';
+            document.querySelector('.hub-title').textContent = 'Soosoo Hub – Demo Game Collection';
+        }
+    }
+
+    function copyEmail() {
+        const email = "gkstmxpffk@naver.com";
+        navigator.clipboard.writeText(email).then(() => {
+            const currentLang = document.querySelector('.language-btn.active').textContent;
+            const message = currentLang === '한국어' ? 
+                "이메일 주소가 복사되었습니다!" : 
+                "Email address copied!";
+            alert(message);
+        }).catch(err => {
+            const currentLang = document.querySelector('.language-btn.active').textContent;
+            const message = currentLang === '한국어' ? 
+                "복사에 실패했어요. 수동으로 복사해 주세요." : 
+                "Copy failed. Please copy manually.";
+            alert(message);
+        });
+    }
 </script>
+
 
 </body>
 </html>
-
