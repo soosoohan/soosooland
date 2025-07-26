@@ -10,9 +10,9 @@
       gtag('js', new Date());
       gtag('config', 'G-4YZHC1G9FN');
     </script>
-   <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수수랜드</title>
+    <title>수수랜드 </title>
     <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
@@ -225,7 +225,7 @@
             <div class="game-card-header">
                 <div class="game-emoji">🌱</div>
                 <div class="game-title">
-                    <span class="ko-text">수수허브</span>
+                    <span class="ko-text">수수랜드</span>
                     <span class="en-text hidden">Soosoo Land</span>
                 </div>
             </div>
@@ -244,7 +244,7 @@
                     Welcome to Soosoo Land where you learn while playing!<br>
                     Click on any game you're interested in to try it out!<br>
                     Feel free to send feedback or suggestions to the email below.<br><br>
-                    <span style="font-family:monospace;">gkstmxpffk@naver.com</span>
+                    <span style="font-family:monospace;">soosooland2025@gmail.com</span>
                     <button class="copy-btn" onclick="copyEmail()">Copy Email</button><br><br>
                     <a href="https://github.com/soosoohan/soosooland/issues" class="github-link">
                         💬 Leave feedback on GitHub
@@ -262,16 +262,16 @@
 <div class="game-card info-card">
     <div class="game-description-text">
         <div class="ko-text">
-            <br>  <p>2048, 24게임, 카쿠로, 수학 퀴즈 게임, 스도쿠, Threes, 숫자 블록 퍼즐, 암산 게임, 카운트다운을 좋아하시는 분은 <strong>넘즐</strong></p><br>
+            <p>2048, 24게임, 카쿠로, 수학 퀴즈 게임, 스도쿠, Threes, 숫자 블록 퍼즐, 암산 게임, 카운트다운을 좋아하시는 분은 <strong>넘즐</strong></p><br>
             <p>지뢰찾기, 워드 서치, 네모네모로직을 좋아하시는 분은 <strong>워퍼즈</strong></p><br>
             <p>점과 상자를 좋아하시는 분은 <strong>트링클</strong></p><br>
-            <p>초성 게임, 워들, 행맨류를 좋아하시는 분은 <strong>모음퀴즈</strong></p>
+            <p>초성 게임, 워들, 꼬들, 행맨을 좋아하시는 분은 <strong>모음퀴즈</strong></p>
         </div>
         <div class="en-text hidden">
             <p>If you like 2048, 24 Game, Kakuro, math quizzes, Sudoku, Threes, number block puzzles, mental arithmetic, or Countdown, try <strong>Numzzle</strong>.</p>
-         <br>   <p>If you like Minesweeper or Word Search  or nemonemologic, try <strong>Worpuzz</strong>.</p>
-           <br> <p>If you like Dots and Boxes or dots and squares puzzles, try <strong>Trinkle</strong>.</p>
-       <br> <p>If you like initial-sound games (Korean), Wordle, or hang man games, try <strong>Moeum Quiz</strong>.</p>
+            <p>If you like Minesweeper or Word Search  or nemonemologic, try <strong>Worpuzz</strong>.</p>
+            <p>If you like Dots and Boxes or dots and squares puzzles, try <strong>Trinkle</strong>.</p>
+            <p>If you like initial-sound games (Korean), Wordle, or hang man-style games, try <strong>Moeum Quiz</strong>.</p>
         </div>
     </div>
 </div>
@@ -373,7 +373,7 @@
             <div class="game-description-text">
                 <div class="ko-text">
                     격자속에 숨어있는 글자를 찾는 게임<br>
-                    재미와 어휘력 집중력 추리력 향상!<br>
+                    재미있게 어휘력, 집중력, 추리력 향상!<br>
                     친구와 대결하거나 컴퓨터와 대결할 수 있음<br>
                     격자의 크기 3가지 중에서 고를 수 있음
                 </div>
@@ -391,18 +391,23 @@
             <div class="game-description-text">
                 <div class="ko-text">
                     <p>기획·개발 : 한수수</p>
-                    <p>© 2025 한수수</p>
-                    
-                </div>
-                <div class="en-text hidden">
-                    <p>Planning & Development: Soosoo Han</p>
                     <p>© 2025 Soosoo Han.</p>
                     <p>All rights reserved.</p>
                 </div>
+                <div class="en-text hidden">
+                    <p>Created and developed by Soosoo Han</p>
+                    <p>© 2025 Soosoo Han.</p>
+                    <p>All rights reserved.</p>
+                 <button class="copy-btn" onclick="location.href='https://semoddang.vercel.app'">🛠️세모땅</button><br><br>
+ <button class="copy-btn" onclick="location.href='https://math-mu-five.vercel.app'">🛠️넘즐폰</button><br><br>
+ <button class="copy-btn" onclick="location.href='https://wordmining.vercel.app'">🛠️워드마이닝</button><br><br>
+
+</div>
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
     function setLanguage(lang) {
@@ -416,15 +421,15 @@
             enTexts.forEach(el => el.classList.add('hidden'));
             koBtns.classList.add('active');
             enBtns.classList.remove('active');
-            document.title = '수수허브';
-            document.querySelector('.hub-title').textContent = '수수허브 – 데모 게임 모음';
+            document.title = '수수랜드';
+            document.querySelector('.hub-title').textContent = '수수랜드 – 데모 게임 모음';
         } else {
             koTexts.forEach(el => el.classList.add('hidden'));
             enTexts.forEach(el => el.classList.remove('hidden'));
             koBtns.classList.remove('active');
             enBtns.classList.add('active');
             document.title = 'Soosoo\'s Game Terminal';
-            document.querySelector('.hub-title').textContent = 'Soosoo Hub – Demo Game Collection';
+            document.querySelector('.hub-title').textContent = 'Soosoo Land – Demo Game Collection';
         }
     }
 
