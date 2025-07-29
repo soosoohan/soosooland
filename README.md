@@ -20,8 +20,8 @@ This is a Korean language puzzle game where players guess the hidden consonants 
 - 정답 자음은 해당 위치에 표시되고, 오답 자음은 시도 횟수가 차감됩니다.  
   Correct consonants are revealed in their positions, while incorrect guesses reduce your attempt count.
 
-- 3~5번의 기회 안에 문장을 완성하면 승리!  
-  Complete the sentence within 3~5 tries to win!
+- 3번의 기회 안에 문장을 완성하면 승리!  
+  Complete the sentence within 3 tries to win!
 
 - 실패하면 정답 문장이 공개됩니다.  
   If you fail, the correct sentence will be shown.
