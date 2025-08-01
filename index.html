@@ -167,13 +167,13 @@
         display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 668px) {
         body {
             padding: 10px;
         }
 
         .games-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: 2fr;
             gap: 15px;
         }
 
@@ -303,10 +303,9 @@
             </div>
         </div>
 <!-- 둘이 모음 게임 -->
-        <div class="game-card" onclick="location.href='https://doori-psi.vercel.app 
-'">
+        <div class="game-card" onclick="location.href='https://doori-psi.vercel.app'">
             <div class="game-card-header">
-                <div class="game-emoji">📚</div>
+                <div class="game-emoji">📚👥</div>
                 <div class="game-title">
                     <span class="ko-text">둘이 모음</span>
                     <span class="en-text hidden">Doori Moeum<br>(Vowel Puzzle)</span>
@@ -319,6 +318,7 @@
                 </div>
                 <div class="en-text hidden">
                     <strong>Korean Hangman!</strong><br>
+                    Two people compete against each other.<br>
                     A Korean puzzle game where vowels guide you to the answer!<br>
                     Complete sentences by adding consonants using hints.<br>
                     Improves general knowledge, vocabulary, and deduction<br>
@@ -365,19 +365,48 @@
             <div class="game-card-header">
                 <div class="game-emoji">🔢</div>
                 <div class="game-title">
-                    <span class="ko-text">넘즐 시리즈</span>
-                    <span class="en-text hidden">NUMZZLE Series</span>
+                    <span class="ko-text">넘즐</span>
+                    <span class="en-text hidden">NUMZZLE</span>
                 </div>
             </div>
             <div class="game-description-text">
                 <div class="ko-text">
                    <strong> 숫자 카드와 연산카드로 수식을 만드세요. </strong><br><br>
-                    결과값을 목표숫자, 최대값, 최소값 중에서 고를 수 있음<br>
+                    혼자 하는 게임 <br>결과값을 목표숫자, 최대값, 최소값 중에서 고를 수 있음<br>
                     연산 능력과 논리력 향상<br>
                 </div>
                 <div class="en-text hidden">
                     <strong>Create equations using number and operation cards</strong><br>
                     Choose from target number, maximum, or minimum values<br>
+                    Improves arithmetic skills and logical thinking<br>
+                </div>
+<div class="game-difficulty">
+                <span class="ko-text">게임 시작</span>
+                <span class="en-text hidden">Start Game</span>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 넘플 게임 -->
+        <div class="game-card" onclick="location.href='https://numpple.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">🔢👥</div>
+                <div class="game-title">
+                    <span class="ko-text">넘플 </span>
+                    <span class="en-text hidden">NUMPPLE</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 숫자 카드와 연산카드로 수식을 만드세요. </strong><br><br>
+                    두 사용자가 대결하는 게임 <br>결과값을 목표숫자, 최대값, 최소값 중에서 고를 수 있음<br>
+                    연산 능력과 논리력 향상<br>
+                </div>
+                <div class="en-text hidden">
+                    <strong>Create equations using number and operation cards</strong><br>
+                    Two people compete against each other.<br>
+Choose from target number, maximum, or minimum values<br>
                     Improves arithmetic skills and logical thinking<br>
                 </div>
 <div class="game-difficulty">
@@ -393,15 +422,15 @@
             <div class="game-card-header">
                 <div class="game-emoji">📚</div>
                 <div class="game-title">
-                    <span class="ko-text">워퍼즈 메이트 </span>
+                    <span class="ko-text">워퍼즈  </span>
                     <span class="en-text hidden">WORPUZZ </span>
                 </div>
             </div>
             <div class="game-description-text">
                 <div class="ko-text">
                     <strong>격자를 클릭해서 가로, 세로, 대각선으로 숨어있는 단어를 찾으세요.</strong> <br><br>
-                    재미있게 어휘력, 집중력, 추리력 향상!<br>
                     컴퓨터와 대결<br>
+                    재미있게 어휘력, 집중력, 추리력 향상!<br>
                     격자의 크기 3가지 중에서 고를 수 있음
                 </div>
                 <div class="en-text hidden">
@@ -420,23 +449,23 @@
 <!-- 워퍼즈 메이트 게임 -->
         <div class="game-card" onclick="location.href='https://worpuzzmate.vercel.app'">
             <div class="game-card-header">
-                <div class="game-emoji">📚</div>
+                <div class="game-emoji">📚👥</div>
                 <div class="game-title">
                     <span class="ko-text">워퍼즈 메이트 </span>
-                    <span class="en-text hidden">WORPUZZ </span>
+                    <span class="en-text hidden">WORPUZZ MATE </span>
                 </div>
             </div>
             <div class="game-description-text">
                 <div class="ko-text">
                     <strong>격자를 클릭해서 가로, 세로, 대각선으로 숨어있는 단어를 찾으세요.</strong> <br><br>
-                    재미있게 어휘력, 집중력, 추리력 향상!<br>
-                     두 사용자가  단어 찾기를  대결합니다. <br>
-                    격자의 크기 2가지 중에서 고를 수 있음
-                </div>
+                    두 사용자가  단어 찾기를  대결합니다. <br>
+                    격자의 크기 2가지 중에서 고를 수 있음<br>
+                재미있게 어휘력, 집중력, 추리력 향상!<br>
+                     </div>
                 <div class="en-text hidden">
                     <strong>Find hidden letters in the grid</strong><br>
                     Fun way to improve vocabulary, focus, and deduction!<br>
-                    Play against friends or computer<br>
+                    Two people compete against each other.<br>
                     Choose from 2 different grid sizes
                 </div>
             <div class="game-difficulty">
@@ -459,8 +488,8 @@
                     <p>© 2025 Soosoo Han.</p>
                     <p>All rights reserved.</p>
                  <br>   
-                 <button class="copy-btn" onclick="location.href='https://semoddang.vercel.app'">🛠️semoddang</button><br>
- <button class="copy-btn" onclick="location.href='https://math-mu-five.vercel.app'">🛠️numnum</button><br>
+                 <button class="copy-btn" onclick="location.href='https://semoddang.vercel.app'">🛠️semoddang</button><br><br>
+ <button class="copy-btn" onclick="location.href='https://math-mu-five.vercel.app'">🛠️numnum</button><br><br>
  <button class="copy-btn" onclick="location.href='https://wordmining.vercel.app'">🛠️wordmining</button><br>
 
 </div>
