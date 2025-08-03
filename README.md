@@ -235,7 +235,7 @@ Two players take turns placing black and white stones.
 가로, 세로, 대각선으로 5개의 돌을 놓는 것이 목표입니다.   
 The goal is to make a straight line of exactly 5 stones—horizontally, vertically, or diagonally.  
 
-15x15의 격자에서 교찾ㅁ에 돌을 놓습니다.  
+15x15의 격자에서 교차점에 돌을 놓습니다.  
 The board is 15×15, and stones go on the intersections.  
 
 놓은 돌은 움직이지 않아요.  
