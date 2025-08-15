@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>수수랜드신문</title>
+<style>
+  :root{--paper:#fff8ef;--frame:#e9dccb;--ink:#222;--muted:#7a6c5b;--dot:#c9b79e}
+  
+
+body{margin:0;background:#faf7f3;color:var(--ink);font-family:system-ui,apple-system,Segoe UI,Roboto,sans-serif; font-size: 20px;}
+  .wrap{max-width:600px;margin:auto;padding:18px}
+  h1{font-size:26px;margin:0 0 10px}
+  .topnav{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+  .topnav a{padding:6px 10px;border:1px solid var(--frame);border-radius:8px;background:#fff;text-decoration:none;color:#333;font-weight:600}
+  .section-title{margin:20px 0 8px;font-size:20px;font-weight:800;color:#4a3c2b}
+  .card{background:#fff;border:1px solid var(--frame);border-radius:12px;padding:12px;margin:10px 0}
+  table{width:100%;border-collapse:collapse;font-size:20px;background:#fff;border:1px solid var(--frame);border-radius:8px;overflow:hidden}
+  th,td{border-bottom:1px solid #efe5d6;padding:8px;text-align:center}
+  th:first-child,td:first-child{text-align:left}
+  .up{color:#0b7a3e;font-weight:700}
+  .down{color:#b12a2a;font-weight:700}
+  .new{color:#6b5a45;font-weight:700}
+
+  /* 연표 */
+  .hint{color:var(--muted);font-size:13px;margin-bottom:8px}
+  .year{font-weight:800;margin:18px 0 8px;font-size:20px;color:#4a3c2b}
+  .timeline{position:relative;padding-left:14px;border-left:3px solid #e7dccc}
+  .item{margin:10px 0 14px;position:relative}
+  .dot{position:absolute;left:-17px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--dot);border:2px solid #eee}
+.date {
+  margin-left: 6px; font-size:20px/* 점과 날짜 사이 간격 확보 */
+}
+ .ttl{font-size:26px; margin:2px 0 2px}
+  
+
+.date-ttl {
+  font-weight: 500;
+  margin: 2px 0;
+  white-space: nowrap; /* 필요 시 줄바꿈 방지 */
+}
+.desc{color:#4f4a43;font-size:20px;margin:0}
+  .badge{display:inline-block;margin-left:6px;font-size:20px;padding:2px 6px;border-radius:999px;background:#f2ebe1;border:1px solid #e6dccd;color:#6b5a45}
+  a.more{font-size:20px}
+.square-button {
+            width: 250px;
+            height: 45px;
+            background-color: #FFB3D9; /* 연분홍 */
+            color: white;
+            border: none;
+            border-radius: 12px; /* 둥근 모서리 */
+            cursor: pointer;
+            font-size: 1.1rem; /*크기 고정 */
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.2;
+            margin: 8px;
+            transition: all 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+    .square-button:hover {
+        background-color: #FF8FAB; /* 호버 시 진한 분홍 */
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .square-button:active {
+        transform: scale(0.95);
+    }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📰 수수랜드의 기록</h1>
+  <nav class="topnav">
+    <a href="#aug">2025년 8월 순위</a>
+    <a href="#jul">2025년 7월 순위</a>
+    <a href="#aug">2025년 8월 연표</a>
+    <a href="#timeline">2025년 7월 연표</a>
+  </nav>
+
+  <!-- 월간 인기순위 (순위변동만) -->
+  <section class="card" id="aug">
+    <div class="section-title">2025년 8월 인기순위</div>
+    <table>
+      <thead><tr><th>순위</th><th>게임</th><th>순위변동</th></tr></thead>
+      <tbody id="augBody"></tbody>
+    </table>
+  </section>
+<section class="card" id="aug-month-timeline">
+  <div class="section-title">📅 2025년 8월 연표</div>
+  <div class="hint"></div>
+  <div class="timeline" id="augTimeline"></div>
+</section>
+
+<button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
+    재미있게 공부하는 수수랜드
+</button>
+
+  <section class="card" id="jul">
+    <div class="section-title">2025년 7월 인기순위</div>
+    <table>
+      <thead><tr><th>순위</th><th>게임</th><th>순위변동</th></tr></thead>
+      <tbody id="julBody"></tbody>
+    </table>
+  </section>
+
+  <!-- 연표 -->
+  <section class="card" id="timeline">
+    <div class="section-title">📅 2025년 5월~ 7월 연표</div>
+    <div class="hint"></div>
+    <div id="years"></div>
+  </section>
+
+
+<button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
+    재미있게 공부하는 수수랜드
+</button>
+
+
+</div>
+
+<script>
+/* ===================== 인기순위(순위변동만) ===================== */
+const august = ["넘즐", "둘이모음", "넘플", "워퍼즈", "트링클", "숫자야구", "워퍼즈메이트", "넘털"];
+const july   = ["넘즐", "워퍼즈", "트링클", "모음퀴즈", "워퍼즈메이트"];
+
+function rankMap(list){ const m=new Map(); list.forEach((name,i)=>m.set(name,i+1)); return m; }
+function rankDelta(curRank, prevRank){
+  if (!prevRank) return { text:"NEW", cls:"new" };
+  const d = prevRank - curRank;
+  if (d>0)  return { text:`▲ ${d}계단`, cls:"up" };
+  if (d<0)  return { text:`▼ ${-d}계단`, cls:"down" };
+  return { text:"유지", cls:"" };
+}
+function fillRankOnly(currentNames, prevNames, tbodyId){
+  const tb = document.getElementById(tbodyId);
+  if(!tb) return;
+  const prev = rankMap(prevNames);
+  tb.innerHTML = "";
+  currentNames.forEach((name,idx)=>{
+    const curRank = idx+1;
+    const prevRank = prev.get(name);
+    const step = rankDelta(curRank, prevRank);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${curRank}</td><td>${name}</td><td class="${step.cls}">${step.text}</td>`;
+    tb.appendChild(tr);
+  });
+}
+fillRankOnly(august, july, "augBody");
+fillRankOnly(july,   [],   "julBody");
+
+/* ============================ 연표 데이터 (월별로 분리) ============================ */
+/** 월별로만 넣으면 됨. 키는 'YYYY-MM'. 각 항목은 {date:'YYYY-MM-DD', title} */
+const MONTH_EVENTS = {
+  "2025-05": [
+    { date:'2025-05-03', title:'게임 만들기 시작' },
+    { date:'2025-05-16', title:'워드마이닝 탄생' },
+    { date:'2025-05-31', title:'워퍼즈 출시' }
+  ],
+  "2025-06": [
+    { date:'2025-06-05', title:'넘즐 출시' },
+    { date:'2025-06-07', title:'트링클 출시' },
+    { date:'2025-06-15', title:'워퍼즈메이트 출시' },
+    { date:'2025-06-18', title:'모음퀴즈 출시' }
+  ],
+  "2025-07": [
+    { date:'2025-07-06', title:'넘즐엑스 출시' },
+    { date:'2025-07-09', title:'구글 블로그 시작' },
+    { date:'2025-07-12', title:'구글 애널리틱스 코드 심음' },
+    { date:'2025-07-12', title:'수수랜드 탄생' },
+    { date:'2025-07-14', title:'넘플 출시' },
+    { date:'2025-07-16', title:'워퍼즈미니 출시' },
+    { date:'2025-07-18', title:'vercel로 공개' },
+    { date:'2025-07-19', title:'워퍼즈라지 출시' },
+    { date:'2025-07-19', title:'워퍼즈메이트라지 찌니 출시' },
+    { date:'2025-07-20', title:'워퍼즈라지 몽이 출시' },
+    { date:'2025-07-30', title:'모음퀴즈 국내여행 출시' }
+  ],
+  "2025-08": [
+    { date:'2025-08-01', title:'둘이 모음 출시' },
+    { date:'2025-08-02', title:'오목 출시' },
+    { date:'2025-08-02', title:'넘플엑스 출시' },
+    { date:'2025-08-04', title:'넘털 출시' },
+    { date:'2025-08-06', title:'챗지피티와 클로드가 만남' },
+    { date:'2025-08-09', title:'수수랜드에 그림 넣음' },
+    { date:'2025-08-10', title:'모음퀴즈 초등국사 출시' },
+    { date:'2025-08-11', title:'숫자야구게임 출시' },
+    { date:'2025-08-13', title:'단어야구게임 출시' }
+  ]
+};
+
+/* ============================ 연표 그리기 유틸 ============================ */
+const isDate = d => /^\d{4}-\d{2}-\d{2}$/.test(d);
+
+/** 특정 달('YYYY-MM')의 이벤트 배열 반환(정렬 포함) */
+function getMonthEvents(month){
+  const list = (MONTH_EVENTS[month] || []).filter(e => e.date && isDate(e.date));
+  return list.slice().sort((a,b)=> a.date.localeCompare(b.date));
+}
+
+/** 여러 달을 합쳐서 하나의 배열로(정렬 포함) */
+function getRangeEvents(months){
+  const merged = [];
+  (months || []).forEach(m => merged.push(...getMonthEvents(m)));
+  return merged.sort((a,b)=> a.date.localeCompare(b.date));
+}
+
+/** 월 타임라인: month='YYYY-MM' */
+function renderMonthTimeline(month, targetId){
+  const list = getMonthEvents(month);
+  const box = document.getElementById(targetId);
+  if(!box) return;
+  box.innerHTML = "";
+
+  list.forEach(e=>{
+    const item = document.createElement('div');
+    item.className = 'item';
+    item.innerHTML = `
+      <span class="dot"></span>
+      <div class="date-ttl">
+  ${e.date}  ${e.title}
+</div>
+      ${e.desc ? `<p class="desc">${e.desc}${e.link?` · <a class="more" href="${e.link}">더보기</a>`:''}</p>` : '' }
+    `;
+    box.appendChild(item);
+  });
+
+  if(list.length === 0){
+    box.innerHTML = `<div class="item"><div class="ttl">표시할 항목이 없습니다.</div></div>`;
+  }
+}
+
+/** 연표(여러 달 범위) — 연도별로 묶어서 #years 안에 그리기 */
+function renderYearsTimeline(months, containerId){
+  const events = getRangeEvents(months);
+  const byYear = {};
+  events.forEach(e=>{
+    const y = e.date.slice(0,4);
+    (byYear[y] ||= []).push(e);
+  });
+
+  const yearsEl = document.getElementById(containerId);
+  if(!yearsEl) return;
+  yearsEl.innerHTML = "";
+
+  Object.keys(byYear).sort().forEach(y=>{
+    const h = document.createElement('div');
+    h.className='year'; h.textContent = y;
+    const tl = document.createElement('div');
+    tl.className='timeline';
+
+    byYear[y].forEach(e=>{
+      const box = document.createElement('div');
+      box.className='item';
+      box.innerHTML = `
+        <span class="dot"></span>
+        <div class="date-ttl"> ${e.date}  ${e.title} </div>
+  ${e.desc?`<p class="desc">${e.desc}${e.link?` · <a class="more" href="${e.link}">더보기</a>`:''}</p>`:''}
+      `;
+      tl.appendChild(box);
+    });
+
+    yearsEl.appendChild(h);
+    yearsEl.appendChild(tl);
+  });
+
+  if(events.length === 0){
+    yearsEl.innerHTML = `<div class="item"><div class="ttl">표시할 항목이 없습니다.</div></div>`;
+  }
+}
+
+/* ============================ 호출부 ============================ */
+// 8월 월간 타임라인
+renderMonthTimeline('2025-08', 'augTimeline');
+
+// 5~7월만 묶어서 연도별 연표 (8월은 안 들어감)
+renderYearsTimeline(['2025-05','2025-06','2025-07'], 'years');
+
+// (선택) 힌트 문구 자동 세팅
+const hintEls = document.querySelectorAll('.hint');
+hintEls.forEach(el => {
+  if(el.parentElement?.id === 'timeline'){
+    el.textContent = '표시 범위: 2025년 5월 ~ 7월';
+  } else if (el.parentElement?.id === 'aug-month-timeline'){
+    el.textContent = '표시 범위: 2025년 8월';
+  }
+});
+</script>
+</body></html>
