@@ -5,11 +5,12 @@
 -----
 >🛡️ 저작권 안내   
 >
->**워퍼즈 시리즈, 넘즐 시리즈, 모음퀴즈 시리즈, 트링클은  저작권 등록이 완료되었습니다.** 
+>**워퍼즈 시리즈, 넘즐 시리즈, 모음퀴즈 시리즈, 트링클은  창작자 한수수의 독창적인 아이디어와 표현을 바탕으로 제작되었으며, 한국저작권위원회에 저작권등록이 완료된 공식 저작물입니다.** 
 >무단 복제, 무단 이용, 상업적 사용은 법적 책임을 초래할 수 있습니다.   
 >
 >**The Worpuzz series, Numzzle series, Moeum Quiz series and Trinkle
->have been officially copyright registered.
+> created by Han Soosoo. 
+>and they are officially registered with the Korea Copyright Commission.**
 >Unauthorized reproduction, use, or commercial distribution may result
 >in legal consequences.
 -----
