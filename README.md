@@ -1,8 +1,8 @@
 # Soosoo Land
 
 한수수의 데모 게임 모음 / Han Soosoo’s Demo Game Collection
------
 
+-----
 🛡️ 저작권 안내   
 
 >**워퍼즈 시리즈, 넘즐 시리즈, 모음퀴즈 시리즈, 트링클은  저작권 등록이 완료되었습니다.** 
@@ -12,7 +12,6 @@
 >have been officially copyright registered.
 >Unauthorized reproduction, use, or commercial distribution may result
 >in legal consequences.
-
 -----
 
 ## 👤 모음퀴즈 (Moeum Quiz)
