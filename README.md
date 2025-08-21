@@ -1,21 +1,25 @@
+# ⚠️ 안내
+본 저장소의 소스코드와 자료는 작성자(수수)의 허락 없이 **복사·수정·배포·상업적 이용**할 수 없습니다.  
+이 저장소는 오픈소스가 아니며, 교육 및 참고 목적으로만 열람 가능합니다.
+
 # Soosoo Land
 
 한수수의 데모 게임 모음 / Han Soosoo’s Demo Game Collection
 
------
->🛡️ 저작권 안내   
+>---
 >
->**워퍼즈 시리즈, 넘즐 시리즈, 모음퀴즈 시리즈, 트링클은  창작자 한수수의 독창적인 아이디어와 표현을 바탕으로 제작되었으며, 한국저작권위원회에 저작권등록이 완료된 공식 저작물입니다.** 
+>🛡️**워퍼즈 시리즈, 넘즐 시리즈, 모음퀴즈 시리즈, 트링클은  창작자 한수수의 독창적인 아이디어와 표현을 바탕으로 제작되었으며, 한국저작권위원회에 저작권등록이 완료된 공식 저작물입니다.** 
 >무단 복제, 무단 이용, 상업적 사용은 법적 책임을 초래할 수 있습니다.   
 >
->**The Worpuzz series, Numzzle series, Moeum Quiz series and Trinkle
+>🛡️**The Worpuzz series, Numzzle series, Moeum Quiz series and Trinkle
 > created by Han Soosoo. 
 >and they are officially registered with the Korea Copyright Commission.**
 >Unauthorized reproduction, use, or commercial distribution may result
 >in legal consequences.
------
+>
+>-----
 
-## 👤 모음퀴즈 (Moeum Quiz)
+## 👤 모음퀴즈 (Moeum Quiz)과 하루 모음(Haroo Moeum)
 
 모음이 공개된 상태에서 자음을 맞춰서 숨어있는 단어, 구절, 문장을 찾는 게임입니다.  
 This is a Korean language puzzle game where players guess the hidden consonants to complete sentences with only vowels revealed.
@@ -164,11 +168,9 @@ We plan to develop games with more diverse topics and in various languages such 
 |medium  영 12x12 한 10x10    | 워퍼즈   | 워퍼즈 메이트    |
 |large 영 18x12 한 15x11    | 워퍼즈 몽이    | 워퍼즈 찌니   |
 
-
-
 -----
 
-## 🎯 넘즐 (Numzzle)
+## 🎯 넘즐 시리즈 /Numzzle series
 
 **넘즐(Numzzle)**은 **넘버(Number)**와 **퍼즐(Puzzle)**을 결합한 이름입니다.  
 **Numzzle** = Number + Puzzle
@@ -268,6 +270,63 @@ Normal: Plays reasonably well.
 
 고수 컴퓨터는 실수가 없으니 이기기가 쉽지 않을 겁니다.  
 Expert: Very strong and rarely makes mistakes.   
+
+---
+# 👤숫자야구 – Soosooland Edition
+
+브라우저에서 바로 즐기는 **숫자야구** 게임입니다.  
+자리 수와 0 포함 여부를 고를 수 있는 **4가지 모드**를 지원합니다.
+
+> 1S = 자리·숫자 모두 일치  
+> 1B = 숫자만 존재(자리 다름)  
+> 나머지는 OUT  
+> 예: `0S 0B 3OUT`, `1S 1B 1OUT`
+
+## ✨ 특징
+- **4모드 지원:** 3자리/4자리 × 0 포함/제외
+- **중복 없는 숫자**만 허용
+- **실시간 유효성 검사** → 정확히 N자리 입력 시만 제출 가능
+- 결과는 `S/B/OUT` 형식으로 로그에 표시 (최신 기록이 위로)
+- 모바일 친화 UI (큰 입력창, 큰 글자, 접근성 강화)
+
+## 🎮 게임 규칙
+- 비밀 숫자는 **서로 다른 숫자**로 구성됩니다.
+- (3자리) 정답 길이 3 / (4자리) 정답 길이 4
+- 0 포함 모드에서도 **첫 자리는 0이 되지 않습니다.**
+- 추측을 제출하면 `S`, `B`, `OUT` 개수가 표시됩니다.
+- `S`가 자리 수와 같아지면 승리!
+
+## 🔀 모드
+| 버튼 | 자리 수 | 0 포함 | 비고 |
+|---|---:|:---:|---|
+| **3자리 · 1-9 | 3 | ❌ | 1–9만 사용 |
+| **3자리 · 0-9 | 3 | ✅ | 0–9 사용, 첫 자리는 0 금지 |
+| **4자리 · 1-9 | 4 | ❌ | 1–9만 사용 |
+| **4자리 · 0-9 | 4 | ✅ | 0–9 사용, 첫 자리는 0 금지 |
+
+---
+# 👤 단어 야구 (Word Baseball)
+
+## 🎯 게임 소개
+단어 야구는 **단어 맞히기 퍼즐 게임**입니다.  
+주어진 힌트를 바탕으로 정답 단어를 추측하며, 각 시도마다 **스트라이크(S)**와 **볼(B)** 판정을 통해 정답에 가까워집니다.
+
+- **스트라이크 (S)** : 글자와 위치가 모두 맞음  
+- **볼 (B)** : 글자는 맞지만 위치가 다름  
+- **아웃** : 해당 글자가 단어에 없음
+
+## 🕹️ 플레이 방법
+1. 게임 시작 시 단어 길이와 글자 중복 허용 여부를 선택합니다.  
+2. 추측 단어를 입력하고 결과를 확인합니다.  
+3. 결과를 바탕으로 다음 단어를 추측합니다.  
+4. 정답을 맞히면 게임 종료!  
+5. 게임을 포기하면 정답이 공개됩니다.
+
+## ⚙️ 기능
+- 단어 길이 선택 (예: 4글자, 5글자)  
+- 글자 중복 허용 여부 설정  
+- 정답 공개 및 재도전 기능  
+- 잘못된 입력 방지 (단어 사전 검증)
 
 ---
 
