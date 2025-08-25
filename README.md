@@ -368,12 +368,13 @@ Expert: Very strong and rarely makes mistakes.
 - **B**: 남은 자음들 간 **멀티셋 교집합** 개수  
 - **OUT**: 이번 추측 자음 수 − (S + B)
 
-Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syllables).
-	•	You see the vowel sequence as a hint, and must guess words with the same vowels.
-	•	Scoring uses only consonants (initial + final; double finals decomposed).
-	•	S: same position/slot/index & consonant
-	•	B: consonant exists but at a different position/slot
-	•	OUT: consonant not in the secret
+Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syllables).  
+- You see the vowel sequence as a hint, and must guess words with the same vowels.  
+- Scoring uses only consonants (initial + final; double finals decomposed).  
+- S: same position/slot/index & consonant   
+- B: consonant exists but at a different position/slot  
+- OUT: consonant not in the secret   
+
 ---
 ## 🌟 Soosooland - Game Demo Hub by Han Soosoo
 
