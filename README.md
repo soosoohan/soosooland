@@ -3,8 +3,8 @@
 이 저장소는 오픈소스가 아니며, 교육 및 참고 목적으로만 열람 가능합니다.
 
 # Soosoo Land
-
-한수수의 데모 게임 모음 / Han Soosoo’s Demo Game Collection
+수수랜드는 저작권을 존중하며, 교육·두뇌개발 게임을 함께 나누는 플랫폼입니다.  
+Soosooland respects copyright and serves as a platform for sharing educational and brain-training games.
 
 >---
 >
@@ -379,6 +379,40 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 - OUT: consonant not in the secret   
 
 ---
+
+## 운영 원칙 (Operating Principles)
+
+- 모든 게임은 반드시 **제작자가 본인 저작권을 보유한 게임**이어야 합니다.  
+  All games must be created and owned by the creator with proper copyright.  
+
+- 타인의 게임을 무단으로 업로드하는 경우 발생하는 모든 법적 책임은 **제작자 본인에게 있습니다**.  
+  Any unauthorized upload of other people’s games will make the creator fully responsible for any legal issues.  
+
+- 게임의 저작권 및 소유권은 전적으로 제작자에게 있으며, 수수랜드는 단순히 **플랫폼(연결·소개)** 역할만 합니다.  
+  Copyright and ownership remain entirely with the creator; Soosooland only serves as a **platform (link & showcase)**.  
+
+- 제작자는 언제든 요청 시 자신의 게임을 수수랜드에서 삭제할 권리가 있습니다.  
+  Creators have the right to request removal of their games from Soosooland at any time.  
+
+- 구글 애널리틱스/애드센스 등의 코드가 삽입된 경우, 모든 데이터 및 수익은 전적으로 **제작자 계정**에 귀속됩니다.  
+  If Google Analytics/AdSense codes are included, all data and revenue go directly to the creator’s own account.  
+
+- 게임은 깃허브 외에도 Vercel, Netlify, itch.io 등 **다양한 플랫폼에 호스팅**할 수 있으며, 수수랜드에는 단순히 **해당 링크(URL)**만 연결됩니다.  
+  Games can be hosted on GitHub or other platforms (Vercel, Netlify, itch.io, etc.), and Soosooland only links to the provided URL.  
+
+- **단순 오락성 게임은 지양하며**, 수수랜드는 학습·두뇌개발·퍼즐·전략적 성격의 게임을 중심으로 운영됩니다.  
+  Purely entertainment-focused games are discouraged; Soosooland focuses on educational, brain-training, puzzle, and strategy games.  
+
+---
+
+혹시 제작하신 게임을 수수랜드에 함께 올리고 싶으시다면, 게임이 올라간 주소(URL)만 알려주시면 됩니다.  
+수수랜드에는 게임 파일을 직접 올리는 것이 아니라, **링크만 연결**하게 됩니다.  
+
+If you would like to share your game on Soosooland, simply provide the URL where your game is hosted.  
+Soosooland does not host the game files directly, but only links to the provided address.
+
+---
+
 ## 🌟 Soosooland - Game Demo Hub by Han Soosoo
 
 > "Learning through fun, and fun through learning."
