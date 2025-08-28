@@ -403,6 +403,9 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 - **단순 오락성 게임은 지양하며**, 수수랜드는 학습·두뇌개발·퍼즐·전략적 성격의 게임을 중심으로 운영됩니다.  
   Purely entertainment-focused games are discouraged; Soosooland focuses on educational, brain-training, puzzle, and strategy games.  
 
+- 게임 자체가 건전하더라도, 부적절하거나 불법적인 광고가 포함된 경우 수수랜드에서 삭제될 수 있습니다.
+- Even if the game itself is appropriate, if it contains inappropriate or illegal advertisements, it may be removed from Soosooland.
+
 ---
 
 혹시 제작하신 게임을 수수랜드에 함께 올리고 싶으시다면, 게임이 올라간 주소(URL)만 알려주시면 됩니다.  
