@@ -403,22 +403,18 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 - **단순 오락성 게임은 지양하며**, 수수랜드는 학습·두뇌개발·퍼즐·전략적 성격의 게임을 중심으로 운영됩니다.  
   Purely entertainment-focused games are discouraged; Soosooland focuses on educational, brain-training, puzzle, and strategy games.  
 
-- 게임 자체가 건전하더라도, 부적절하거나 불법적인 광고가 포함된 경우 수수랜드에서 삭제될 수 있습니다.
-- Even if the game itself is appropriate, if it contains inappropriate or illegal advertisements, it may be removed from Soosooland.
+- 게임 자체가 건전하더라도, **도박, 성인물, 불법 의약품, 저작권 침해 등 부적절하거나 불법적인 광고가 포함된 경우 수수랜드에서 삭제될 수 있습니다.
+  Even if the game itself is appropriate, it may be removed from Soosooland if it includes inappropriate or illegal advertisements (e.g., gambling, adult content, illegal pharmaceuticals, or copyright-infringing material).”
 
 -	데모 버전 게임도 등록 가능하나, 반드시 명확히 표시되어야 합니다.
 -	Demo versions are also allowed, but must be clearly labeled as such.
----
 
-혹시 제작하신 게임을 수수랜드에 함께 올리고 싶으시다면, 게임이 올라간 주소(URL)만 알려주시면 됩니다.  
-수수랜드에는 게임 파일을 직접 올리는 것이 아니라, **링크만 연결**하게 됩니다.  
-
-If you would like to share your game on Soosooland, simply provide the URL where your game is hosted.  
-Soosooland does not host the game files directly, but only links to the provided address.
+- 수수랜드에는 게임 파일을 직접 올리는 것이 아니라, **링크만 연결**하게 됩니다.  
+- Soosooland does not host the game files directly, but only links to the provided address.
 
 ---
 
-## 🌟 Soosooland - Game Demo Hub by Han Soosoo
+## 🌟 Soosooland - Game Hub by Han Soosoo
 
 > "Learning through fun, and fun through learning."
 
