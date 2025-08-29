@@ -380,7 +380,6 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 
 ---
 
-
 🎮 수수랜드 운영 원칙 (Soosooland Operating Principles)
 
 1. 저작권 및 소유권 (Copyright & Ownership)
@@ -394,8 +393,8 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 	•	Creators may request removal of their games from Soosooland at any time.
 	•	구글 애널리틱스/애드센스 등의 코드가 삽입된 경우, 데이터와 수익은 전적으로 제작자 계정에 귀속됩니다.
 	•	If Analytics/AdSense codes are included, all data and revenue go directly to the creator’s account.
-
-⸻
+	•	수수랜드는 링크 제공 플랫폼일 뿐, 게임의 운영·수익·법적 문제에 직접 책임을 지지 않습니다.
+	•	Soosooland is not liable for the operation, revenue, or legal issues of submitted games.
 
 2. 기술적 요구사항 (Technical Requirements)
 	•	게임은 반드시 웹브라우저에서 실행 가능해야 하며, 별도 설치를 요구하지 않아야 합니다.
@@ -406,8 +405,8 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 	•	Games may be hosted on GitHub, Vercel, Netlify, itch.io, etc., and Soosooland only links to the provided URL.
 	•	데모 버전도 등록 가능하나 반드시 명확히 표시해야 합니다.
 	•	Demo versions may be submitted but must be clearly labeled.
-
-⸻
+	•	게임은 기본적인 보안·호환성 요건을 충족해야 하며, 취약점이 있는 경우 등록이 제한될 수 있습니다.
+	•	Games must meet basic security and compatibility requirements, and may be restricted if vulnerabilities exist.
 
 3. 콘텐츠 품질 기준 (Content Quality Standards)
 	•	수수랜드는 교육·두뇌개발·퍼즐·전략 중심의 게임을 지향합니다.
@@ -416,35 +415,36 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 	•	Games must present clear learning objectives or educational value.
 	•	연령대별 적합성을 명시하고, 폭력·차별 등 부적절한 내용을 포함하지 않아야 합니다.
 	•	Age-appropriate content must be specified, and games must not contain violence, discrimination, or other inappropriate material.
-
-⸻
+	•	수수랜드는 교육적 가치, 안전성, 적합성을 충족하지 못하는 게임의 등록을 거부할 수 있습니다.
+	•	Soosooland may reject games that fail to meet standards of educational value, safety, or appropriateness.
 
 4. 광고 및 외부 링크 (Advertisements & External Links)
 	•	게임 자체가 건전하더라도, 게임 내부나 연결된 페이지에 도박, 성인물, 불법 의약품, 저작권 침해 등 부적절한 광고가 포함된 경우 게시가 제한될 수 있습니다.
 	•	Even if the game itself is appropriate, if advertisements for gambling, adult content, illegal drugs, copyright infringement, or other inappropriate materials appear within the game or linked pages, the game may be restricted.
-
-⸻
+	•	게임에 포함된 광고와 외부 링크는 등록 전 검토를 받을 수 있습니다.
+	•	Advertisements and external links within the game may be reviewed before approval.
 
 5. 운영 및 관리 책임 (Operation & Maintenance Responsibilities)
 	•	제작자는 게임의 지속적 관리와 버그 수정에 책임이 있습니다.
 	•	Creators are responsible for ongoing maintenance and bug fixes.
 	•	사용자 신고나 문제 제기 시, 제작자는 합리적 기간 내 대응해야 합니다.
 	•	Creators must respond within a reasonable timeframe to user reports or issues.
-	•	수수랜드는 부적절한 게임 링크를 사전 통지 없이 삭제할 권리를 보유합니다.
-	•	Soosooland reserves the right to remove inappropriate games without prior notice.
-  • 수수랜드에서 링크가 삭제되더라도, 제작자가 직접 호스팅하는 원본 게임에는 영향을 주지 않습니다.  
-  • Even if a link is removed from Soosooland, the original game hosted by the creator remains unaffected.
-
-⸻
+	•	제작자는 게임의 주요 업데이트나 삭제가 있을 경우 수수랜드에 사전에 알려야 합니다.
+	•	Creators must notify Soosooland in advance of major updates or game removal.
+	•	수수랜드는 부적절한 게임 링크를 사전 통지 없이 삭제할 권리를 보유합니다. (삭제는 수수랜드 플랫폼에서만 적용되며, 제작자의 원본 게임에는 영향을 주지 않습니다.)
+	•	Soosooland reserves the right to remove inappropriate games without prior notice. (Removal applies only on the Soosooland platform and does not affect the creator’s original game.)
 
 6. 개인정보 보호 (Privacy Protection)
 	•	만 14세 미만 아동의 개인정보는 수집하지 않아야 하며, 관련 법규를 준수해야 합니다.
 	•	Personal information of children under 14 must not be collected, and relevant privacy laws must be followed.
 
-최초 작성: 2025-08-28  
-마지막 수정: 2025-08-29  
-First created: 2025-08-28  
-Last updated: 2025-08-29
+7. 기타 (Miscellaneous)
+	•	본 운영원칙은 필요에 따라 언제든 추가되거나 변경될 수 있으며, 변경 시 수수랜드에 공지됩니다.
+	•	These operating principles may be added to or modified at any time as necessary, and any changes will be announced on Soosooland.
+
+
+📅 마지막 수정: 2025-08-29
+       Last updated: 2025-08-29
 
 ---
 
