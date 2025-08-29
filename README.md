@@ -380,37 +380,71 @@ Hangul Baseball is a consonant-based deduction game for Korean words (2–5 syll
 
 ---
 
-## 운영 원칙 (Operating Principles)
 
-- 모든 게임은 반드시 **제작자가 본인 저작권을 보유한 게임**이어야 합니다.  
-  All games must be created and owned by the creator with proper copyright.  
+🎮 수수랜드 운영 원칙 (Soosooland Operating Principles)
 
-- 타인의 게임을 무단으로 업로드하는 경우 발생하는 모든 법적 책임은 **제작자 본인에게 있습니다**.  
-  Any unauthorized upload of other people’s games will make the creator fully responsible for any legal issues.  
+1. 저작권 및 소유권 (Copyright & Ownership)
+	•	모든 게임은 반드시 제작자가 본인 저작권을 보유한 게임이어야 합니다.
+	•	Games must be created and owned by the submitting creators.
+	•	게임의 저작권은 전적으로 제작자에게 있으며, 수수랜드는 단순히 플랫폼(링크·소개) 역할만 합니다.
+	•	Copyright remains entirely with the creator; Soosooland only serves as a platform (link & showcase).
+	•	무단 업로드는 금지되며, 발생하는 모든 법적 책임은 제작자 본인에게 있습니다.
+	•	Unauthorized uploads are prohibited, and all legal responsibility lies with the creator.
+	•	제작자는 언제든 자신의 게임을 수수랜드에서 삭제 요청할 권리가 있습니다.
+	•	Creators may request removal of their games from Soosooland at any time.
+	•	구글 애널리틱스/애드센스 등의 코드가 삽입된 경우, 데이터와 수익은 전적으로 제작자 계정에 귀속됩니다.
+	•	If Analytics/AdSense codes are included, all data and revenue go directly to the creator’s account.
 
-- 게임의 저작권 및 소유권은 전적으로 제작자에게 있으며, 수수랜드는 단순히 **플랫폼(연결·소개)** 역할만 합니다.  
-  Copyright and ownership remain entirely with the creator; Soosooland only serves as a **platform (link & showcase)**.  
+⸻
 
-- 제작자는 언제든 요청 시 자신의 게임을 수수랜드에서 삭제할 권리가 있습니다.  
-  Creators have the right to request removal of their games from Soosooland at any time.  
+2. 기술적 요구사항 (Technical Requirements)
+	•	게임은 반드시 웹브라우저에서 실행 가능해야 하며, 별도 설치를 요구하지 않아야 합니다.
+	•	Games must be playable in web browsers without requiring additional installation.
+	•	모바일 친화적 디자인을 권장하며, 다양한 화면 크기에서 작동해야 합니다.
+	•	Mobile-friendly design is recommended, and games should work across screen sizes.
+	•	게임은 깃허브, Vercel, Netlify, itch.io 등 외부 플랫폼에 호스팅되며, 수수랜드에는 링크(URL)만 연결됩니다.
+	•	Games may be hosted on GitHub, Vercel, Netlify, itch.io, etc., and Soosooland only links to the provided URL.
+	•	데모 버전도 등록 가능하나 반드시 명확히 표시해야 합니다.
+	•	Demo versions may be submitted but must be clearly labeled.
 
-- 구글 애널리틱스/애드센스 등의 코드가 삽입된 경우, 모든 데이터 및 수익은 전적으로 **제작자 계정**에 귀속됩니다.  
-  If Google Analytics/AdSense codes are included, all data and revenue go directly to the creator’s own account.  
+⸻
 
-- 게임은 깃허브 외에도 Vercel, Netlify, itch.io 등 **다양한 플랫폼에 호스팅**할 수 있으며, 수수랜드에는 단순히 **해당 링크(URL)**만 연결됩니다.  
-  Games can be hosted on GitHub or other platforms (Vercel, Netlify, itch.io, etc.), and Soosooland only links to the provided URL.  
+3. 콘텐츠 품질 기준 (Content Quality Standards)
+	•	수수랜드는 교육·두뇌개발·퍼즐·전략 중심의 게임을 지향합니다.
+	•	Soosooland focuses on educational, brain-training, puzzle, and strategy games.
+	•	게임은 명확한 학습 목표나 교육적 가치를 제시해야 합니다.
+	•	Games must present clear learning objectives or educational value.
+	•	연령대별 적합성을 명시하고, 폭력·차별 등 부적절한 내용을 포함하지 않아야 합니다.
+	•	Age-appropriate content must be specified, and games must not contain violence, discrimination, or other inappropriate material.
 
-- **단순 오락성 게임은 지양하며**, 수수랜드는 학습·두뇌개발·퍼즐·전략적 성격의 게임을 중심으로 운영됩니다.  
-  Purely entertainment-focused games are discouraged; Soosooland focuses on educational, brain-training, puzzle, and strategy games.  
+⸻
 
-- 게임 자체가 건전하더라도, **도박, 성인물, 불법 의약품, 저작권 침해 등 부적절하거나 불법적인 광고가 포함된 경우 수수랜드에서 삭제될 수 있습니다.
-  Even if the game itself is appropriate, it may be removed from Soosooland if it includes inappropriate or illegal advertisements (e.g., gambling, adult content, illegal pharmaceuticals, or copyright-infringing material).”
+4. 광고 및 외부 링크 (Advertisements & External Links)
+	•	게임 자체가 건전하더라도, 게임 내부나 연결된 페이지에 도박, 성인물, 불법 의약품, 저작권 침해 등 부적절한 광고가 포함된 경우 게시가 제한될 수 있습니다.
+	•	Even if the game itself is appropriate, if advertisements for gambling, adult content, illegal drugs, copyright infringement, or other inappropriate materials appear within the game or linked pages, the game may be restricted.
 
--	데모 버전 게임도 등록 가능하나, 반드시 명확히 표시되어야 합니다.
--	Demo versions are also allowed, but must be clearly labeled as such.
+⸻
 
-- 수수랜드에는 게임 파일을 직접 올리는 것이 아니라, **링크만 연결**하게 됩니다.  
-- Soosooland does not host the game files directly, but only links to the provided address.
+5. 운영 및 관리 책임 (Operation & Maintenance Responsibilities)
+	•	제작자는 게임의 지속적 관리와 버그 수정에 책임이 있습니다.
+	•	Creators are responsible for ongoing maintenance and bug fixes.
+	•	사용자 신고나 문제 제기 시, 제작자는 합리적 기간 내 대응해야 합니다.
+	•	Creators must respond within a reasonable timeframe to user reports or issues.
+	•	수수랜드는 부적절한 게임 링크를 사전 통지 없이 삭제할 권리를 보유합니다.
+	•	Soosooland reserves the right to remove inappropriate games without prior notice.
+  • 수수랜드에서 링크가 삭제되더라도, 제작자가 직접 호스팅하는 원본 게임에는 영향을 주지 않습니다.  
+  • Even if a link is removed from Soosooland, the original game hosted by the creator remains unaffected.
+
+⸻
+
+6. 개인정보 보호 (Privacy Protection)
+	•	만 14세 미만 아동의 개인정보는 수집하지 않아야 하며, 관련 법규를 준수해야 합니다.
+	•	Personal information of children under 14 must not be collected, and relevant privacy laws must be followed.
+
+최초 작성: 2025-08-28  
+마지막 수정: 2025-08-29  
+First created: 2025-08-28  
+Last updated: 2025-08-29
 
 ---
 
@@ -427,6 +461,6 @@ Explore more brain games and puzzles in **[Soosooland](https://soosoohan.github.
 
 기획·개발: 한수수   
 Created and Developed by: Soosoo Han  
-ⓒ 2025 한수수. 이 게임의 모든 권리는 제작자인 한수수에게 있습니다.   
+ⓒ 2025 한수수. 모든 권리는 제작자인 한수수에게 있습니다.   
 © 2025 Soosoo Han. All rights reserved.​​​​​​​​​​​​​​​​   
 
