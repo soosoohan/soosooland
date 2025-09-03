@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="ko"><head>
-<!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+
+   <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YZHC1G9FN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -7,300 +11,758 @@
       gtag('js', new Date());
       gtag('config', 'G-4YZHC1G9FN');
     </script>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>수수랜드신문</title>
-<style>
-  :root{--paper:#fff8ef;--frame:#e9dccb;--ink:#222;--muted:#7a6c5b;--dot:#c9b79e}
-  
 
-body{margin:0;background:#faf7f3;color:var(--ink);font-family:system-ui,apple-system,Segoe UI,Roboto,sans-serif; font-size: 20px;}
-  .wrap{max-width:600px;margin:auto;padding:18px}
-  h1{font-size:26px;margin:0 0 10px}
-  .topnav{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
-  .topnav a{padding:6px 10px;border:1px solid var(--frame);border-radius:8px;background:#fff;text-decoration:none;color:#333;font-weight:600}
-  .section-title{margin:20px 0 8px;font-size:20px;font-weight:800;color:#4a3c2b}
-  .card{background:#fff;border:1px solid var(--frame);border-radius:12px;padding:12px;margin:10px 0}
-  table{width:100%;border-collapse:collapse;font-size:20px;background:#fff;border:1px solid var(--frame);border-radius:8px;overflow:hidden}
-  th,td{border-bottom:1px solid #efe5d6;padding:8px;text-align:center}
-  th:first-child,td:first-child{text-align:left}
-  .up{color:#0b7a3e;font-weight:700}
-  .down{color:#b12a2a;font-weight:700}
-  .new{color:#6b5a45;font-weight:700}
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수수랜드 </title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-  /* 연표 */
-  .hint{color:var(--muted);font-size:13px;margin-bottom:8px}
-  .year{font-weight:800;margin:18px 0 8px;font-size:20px;color:#4a3c2b}
-  .timeline{position:relative;padding-left:14px;border-left:3px solid #e7dccc}
-  .item{margin:10px 0 14px;position:relative}
-  .dot{position:absolute;left:-17px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--dot);border:2px solid #eee}
-.date {
-  margin-left: 6px; font-size:20px/* 점과 날짜 사이 간격 확보 */
-}
- .ttl{font-size:26px; margin:2px 0 2px}
-  
 
-.date-ttl {
-  font-weight: 500;
-  margin: 2px 0;
-  white-space: nowrap; /* 필요 시 줄바꿈 방지 */
-}
-.desc{color:#4f4a43;font-size:20px;margin:0}
-  .badge{display:inline-block;margin-left:6px;font-size:20px;padding:2px 6px;border-radius:999px;background:#f2ebe1;border:1px solid #e6dccd;color:#6b5a45}
-  a.more{font-size:20px}
-.square-button {
-            width: 250px;
-            height: 45px;
-            background:var(--dot); /* 연분홍 */
-            color: white;
-            border: none;
-            border-radius: 12px; /* 둥근 모서리 */
-            cursor: pointer;
-            font-size: 1.1rem; /*크기 고정 */
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            line-height: 1.2;
-            margin: 8px;
-            transition: all 0.3s ease;
-            font-family: Arial, sans-serif;
-        }
-
-    .square-button:hover {
-        background-color: #FFB3D9;
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    .square-button:active {
-        transform: scale(0.95);
+    body {
+        font-family: 'Pretendard', sans-serif;
+        background: #2e8b8b;
+        min-height: 100vh;
+        padding: 20px;
+        overflow-y: auto;
+    }
+.games-hub-header {
+    display: flex;
+    align-items: center;      /* 수직 가운데 정렬 */
+    justify-content: center;  /* 기본적으로 가운데 정렬 */
+    position: relative;       /* 오른쪽 버튼 위치 조정을 위해 */
+    margin-bottom: 20px;
+      font-size: clamp(1.3rem, 3.7vw, 1.9rem);
+        color: #f0f8ff;
+  }
+
+  .hub-title {
+    margin: 0;
+    text-align: center;
+        font-size: clamp(1.3rem, 3.7vw, 1.9rem);
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #f0f8ff;
+   }
+
+.language-toggle {
+    position: absolute;
+    right: 0;                 /* 오른쪽으로 고정 */
+}
+    
+ 
+    .language-btn {
+        background: rgba(255,255,255,0.2);
+        color: #f0f8ff;
+        border: 2px solid rgba(255,255,255,0.3);
+        padding: 8px 16px;
+        margin: 0 5px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .language-btn.active {
+        background: rgba(255,255,255,0.9);
+        color: #2e8b8b;
+        border-color: rgba(255,255,255,0.9);
+    }
+
+    .language-btn:hover {
+        background: rgba(255,255,255,0.3);
+    }
+
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .game-card {
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .info-card {
+        cursor: default;
+    }
+
+    .info-card:hover {
+        transform: none;
+    }
+
+    .game-card-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .game-emoji {
+        font-size:1.0rem;
+    }
+
+    .game-title {
+        font-size: clamp(1.2rem, 3vw, 1.4rem);
+        font-weight: bold;
+        color: #2e8b8b;
+        word-wrap: break-word;
+    }
+
+    .game-description-text {
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+        word-wrap: break-word;
+      text-align: center;    
+}
+
+    .game-difficulty {
+        background: #2e8b8b;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+        display: inline-block;
+        margin-bottom: 10px;
+        text-align: center;        
+    }
+
+
+    .github-link {
+        color: #2e8b8b;
+        text-decoration: none;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+    }
+
+    .github-link:hover {
+        text-decoration: underline;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+/* 별모양 버튼들 */
+    .star-button {
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        border: none;
+        border-radius: 20px;
+        padding: 8px 15px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        margin: 5px;
+        transition: all 0.3s ease;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+ }
+
+    .star-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255,215,0,0.6);
+    }
+
+    
+.footer {
+      background: #2e8b8b;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color:white;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 668px) {
+        body {
+            padding: 10px;
+        }
+
+        .games-grid {
+            grid-template-columns: 2fr;
+            gap: 15px;
+        }
+
+        .game-card {
+            padding: 15px;
+        }
+    }
+
+    
+    @media (max-width: 480px) {
+        .hub-title {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        body {
+            min-height: auto;
+        }
+
+        .hub-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .games-grid {
+            gap: 15px;
+        }
+
+        .game-card {
+            padding: 15px;
+        }
     }
 
 </style>
+
+
 </head>
 <body>
-<div class="wrap">
-  <h1>📰 수수랜드의 기록</h1>
-  <nav class="topnav">
-    <a href="#aug">2025년 8월 순위</a>
-    <a href="#jul">2025년 7월 순위</a>
-    <a href="#aug">2025년 8월 연표</a>
-    <a href="#timeline">2025년 7월 연표</a>
-  </nav>
 
-  <!-- 월간 인기순위 (순위변동만) -->
-  <section class="card" id="aug">
-    <div class="section-title">2025년 8월 인기순위</div>
-    <table>
-      <thead><tr><th>순위</th><th>게임</th><th>순위변동</th></tr></thead>
-      <tbody id="augBody"></tbody>
-    </table>
-  </section>
-<section class="card" id="aug-month-timeline">
-  <div class="section-title">📅 2025년 8월 연표</div>
-  <div class="hint"></div>
-  <div class="timeline" id="augTimeline"></div>
-</section>
+<!-- 수수랜드 인트로 오버레이 -->
+<div id="intro" style="position:fixed;inset:0;z-index:9999;background:#2e8b8b;display:grid;place-items:center;overflow:hidden">
+  <!-- 안전 프레임: 확대 시 클리핑 방지 -->
+  <div style="position:absolute;inset:0;display:grid;place-items:center;padding:8vw">
+    <!-- 언덕 -->
+    <div style="
+      position:absolute;left:-25%;right:-25%;bottom:-18%;
+      height:55%;border-radius:50% 50% 0 0 / 100% 100% 0 0;
+      background:radial-gradient(120% 100% at 50% 100%, #369e9e 0%, #2e8b8b 60%, #256f6f 100%);
+    "></div>
 
-<button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
-    재미있게 공부하는 수수랜드
-</button>
+    <!-- 로고 (팔레트 통일) -->
+    <div id="intro-logo" style="
+      font-family:Pretendard, system-ui, sans-serif;
+      font-weight:900; letter-spacing:0.02em;
+      color:#f0f8ff; text-shadow:0 2px 10px rgba(0,0,0,.35);
+      transform:scale(.8); opacity:0; will-change:transform,opacity;
+      font-size:clamp(36px,10vw,86px);
+      animation:intro-rise 2600ms ease forwards;
+    ">수수랜드</div>
 
-  <section class="card" id="jul">
-    <div class="section-title">2025년 7월 인기순위</div>
-    <table>
-      <thead><tr><th>순위</th><th>게임</th><th>순위변동</th></tr></thead>
-      <tbody id="julBody"></tbody>
-    </table>
-  </section>
+    <!-- 작은 꽃잎 몇 개 (초경량) -->
+    <div id="petals"></div>
 
-  <!-- 연표 -->
-  <section class="card" id="timeline">
-    <div class="section-title">📅 2025년 5월~ 7월 연표</div>
-    <div class="hint"></div>
-    <div id="years"></div>
-  </section>
+    <!-- 새소리: 첫 탭 시 보장 재생용 버튼(모바일) -->
+    <button id="intro-start" style="
+      position:absolute;bottom:6vh;left:50%;transform:translateX(-50%);
+      background:rgba(255,255,255,.9);color:#2e8b8b;border:0;border-radius:999px;
+      padding:10px 16px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.2);
+      display:none;cursor:pointer;
+    "></button>
+  </div>
 
-
-<button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
-    재미있게 공부하는 수수랜드
-</button>
-
-
+  <audio id="intro-audio" preload="auto">
+    <!-- 1~2초대의 아주 짧은 새소리 mp3/ogg 권장 (용량 50~100KB) -->
+    <!-- 임시 경량 샘플 -->
+    <source src="https://actions.google.com/sounds/v1/animals/bird_chirp.ogg" type="audio/ogg">
+  </audio>
+  
 </div>
+
+<style>
+@keyframes intro-rise{
+  0%   {opacity:0; transform:scale(.8)}
+  60%  {opacity:1; transform:scale(1.06)}
+  100% {opacity:1; transform:scale(1.00)}
+}
+@keyframes petal-fly{
+  0% {transform:translate3d(var(--x,0), 0, 0) rotate(0deg); opacity:.95}
+  100% {transform:translate3d(calc(var(--x,0) + 220px), -520px, 0) rotate(360deg); opacity:0}
+}
+</style>
 
 <script>
-/* ===================== 인기순위(순위변동만) ===================== */
-const august = ["모음퀴즈", "오목","야구게임","워퍼즈","둘이모음","트링클","넘즐","넘털","넘플","워퍼즈메이트"];
-const july   = ["모음퀴즈","트링클","넘즐", "워퍼즈","워퍼즈메이트"];
+(function(){
+  const intro = document.getElementById('intro');
+  const audio = document.getElementById('intro-audio');
+  const btn   = document.getElementById('intro-start');
+  const petalsWrap = document.getElementById('petals');
 
-function rankMap(list){ const m=new Map(); list.forEach((name,i)=>m.set(name,i+1)); return m; }
-function rankDelta(curRank, prevRank){
-  if (!prevRank) return { text:"NEW", cls:"new" };
-  const d = prevRank - curRank;
-  if (d>0)  return { text:`▲ ${d}계단`, cls:"up" };
-  if (d<0)  return { text:`▼ ${-d}계단`, cls:"down" };
-  return { text:"유지", cls:"" };
-}
-function fillRankOnly(currentNames, prevNames, tbodyId){
-  const tb = document.getElementById(tbodyId);
-  if(!tb) return;
-  const prev = rankMap(prevNames);
-  tb.innerHTML = "";
-  currentNames.forEach((name,idx)=>{
-    const curRank = idx+1;
-    const prevRank = prev.get(name);
-    const step = rankDelta(curRank, prevRank);
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${curRank}</td><td>${name}</td><td class="${step.cls}">${step.text}</td>`;
-    tb.appendChild(tr);
-  });
-}
-fillRankOnly(august, july, "augBody");
-fillRankOnly(july,   [],   "julBody");
-
-/* ============================ 연표 데이터 (월별로 분리) ============================ */
-/** 월별로만 넣으면 됨. 키는 'YYYY-MM'. 각 항목은 {date:'YYYY-MM-DD', title} */
-const MONTH_EVENTS = {
-  "2025-05": [
-    { date:'2025-05-31', title:'워퍼즈 출시' }
-  ],
-  "2025-06": [
-    { date:'2025-06-05', title:'넘즐 출시' },
-    { date:'2025-06-07', title:'트링클 출시' },
-    { date:'2025-06-15', title:'워퍼즈메이트 출시' },
-    { date:'2025-06-21', title:'모음퀴즈 힌트있음출시' }
-  ],
-  "2025-07": [
-    { date:'2025-07-06', title:'넘즐엑스 출시' },
-    { date:'2025-07-14', title:'넘플 출시' },
-    { date:'2025-07-15', title:'모음퀴즈 힌트 없음 출시' },
-    { date:'2025-07-16', title:'워퍼즈미니 출시' },
-    { date:'2025-07-18', title:'수수랜드 공개' },
-    { date:'2025-07-19', title:'워퍼즈메이트 찌니 출시' },
-    { date:'2025-07-20', title:'워퍼즈 몽이 출시' },
-    { date:'2025-07-30', title:'수수랜드 사용자 100명 달성' }
-  
- ],
-  "2025-08": [
-    { date:'2025-08-01', title:'둘이 모음 출시' },
-    { date:'2025-08-02', title:'오목 출시' },
-    { date:'2025-08-02', title:'넘플엑스 출시' },
-    { date:'2025-08-04', title:'넘털 출시' },
-    { date:'2025-08-10', title:'모음퀴즈 초등국사 출시' },
-    { date:'2025-08-11', title:'숫자야구게임 출시' },
-    { date:'2025-08-13', title:'단어야구게임 출시' },
-    { date:'2025-08-15', title:'수수랜드 신문 발행' },
-    { date:'2025-08-15', title:'하루 모음 출시' },
- { date:'2025-08-15', title:'모음퀴즈 난이도5단계 출시' },
- { date:'2025-08-15', title:'둘이모음 난이도5단계 출시' },
- { date:'2025-08-19', title:'트링클,워퍼즈,모음퀴즈 저작권 등록' },
- { date:'2025-08-19', title:'수수랜드 사용자 200명 달성' },
- { date:'2025-08-23', title:'모음퀴즈 둘이모음 고유어 출시' },
- { date:'2025-08-23', title:'네이버 AI 브리핑에 “교육용 게임 플랫폼”으로 소개' },
- { date:'2025-08-25', title:'한글야구게임 출시' },
- { date:'2025-08-25', title:'수수랜드야구게임 2종 출시' }
- 
-    ]
-};
-
-/* ============================ 연표 그리기 유틸 ============================ */
-const isDate = d => /^\d{4}-\d{2}-\d{2}$/.test(d);
-
-/** 특정 달('YYYY-MM')의 이벤트 배열 반환(정렬 포함) */
-function getMonthEvents(month){
-  const list = (MONTH_EVENTS[month] || []).filter(e => e.date && isDate(e.date));
-  return list.slice().sort((a,b)=> a.date.localeCompare(b.date));
-}
-
-/** 여러 달을 합쳐서 하나의 배열로(정렬 포함) */
-function getRangeEvents(months){
-  const merged = [];
-  (months || []).forEach(m => merged.push(...getMonthEvents(m)));
-  return merged.sort((a,b)=> a.date.localeCompare(b.date));
-}
-
-/** 월 타임라인: month='YYYY-MM' */
-function renderMonthTimeline(month, targetId){
-  const list = getMonthEvents(month);
-  const box = document.getElementById(targetId);
-  if(!box) return;
-  box.innerHTML = "";
-
-  list.forEach(e=>{
-    const item = document.createElement('div');
-    item.className = 'item';
-    item.innerHTML = `
-      <span class="dot"></span>
-      <div class="date-ttl">
-  ${e.date}  ${e.title}
-</div>
-      ${e.desc ? `<p class="desc">${e.desc}${e.link?` · <a class="more" href="${e.link}">더보기</a>`:''}</p>` : '' }
+  // 초경량 꽃잎 10개만
+  const N = 10;
+  for(let i=0;i<N;i++){
+    const p = document.createElement('div');
+    p.style.cssText = `
+      position:absolute;bottom:${Math.random()*180+10}px;left:${Math.random()*100}vw;
+      width:14px;height:14px;border-radius:50% 50% 50% 10%;
+      background:linear-gradient(145deg,#ffd1dc,#ff9ab0);
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,.15));
+      animation:petal-fly ${3+Math.random()*3}s linear ${Math.random()*1.2}s infinite;
+      --x:${Math.random()*60-30}px;
     `;
-    box.appendChild(item);
+    petalsWrap.appendChild(p);
+  }
+
+  // 오토플레이 시도
+  let unlocked = false;
+  audio.volume = 0.9;
+  audio.play().then(()=>{ unlocked = true; }).catch(()=> {
+    // 사용자 제스처 필요: 버튼 표시
+    btn.style.display = 'inline-flex';
   });
 
-  if(list.length === 0){
-    box.innerHTML = `<div class="item"><div class="ttl">표시할 항목이 없습니다.</div></div>`;
-  }
-}
-
-/** 연표(여러 달 범위) — 연도별로 묶어서 #years 안에 그리기 */
-function renderYearsTimeline(months, containerId){
-  const events = getRangeEvents(months);
-  const byYear = {};
-  events.forEach(e=>{
-    const y = e.date.slice(0,4);
-    (byYear[y] ||= []).push(e);
+  btn.addEventListener('click', ()=>{
+    audio.play().catch(()=>{}); // 제스처 이후 재생
+    btn.style.display = 'none';
+    finishSoon();
   });
 
-  const yearsEl = document.getElementById(containerId);
-  if(!yearsEl) return;
-  yearsEl.innerHTML = "";
+  // 4초 내 자동 전환(넷플릭스 감각)
+  const timer = setTimeout(finishSoon, 3000);
 
-  Object.keys(byYear).sort().forEach(y=>{
-    const h = document.createElement('div');
-    h.className='year'; h.textContent = y;
-    const tl = document.createElement('div');
-    tl.className='timeline';
-
-    byYear[y].forEach(e=>{
-      const box = document.createElement('div');
-      box.className='item';
-      box.innerHTML = `
-        <span class="dot"></span>
-        <div class="date-ttl"> ${e.date}  ${e.title} </div>
-  ${e.desc?`<p class="desc">${e.desc}${e.link?` · <a class="more" href="${e.link}">더보기</a>`:''}</p>`:''}
-      `;
-      tl.appendChild(box);
-    });
-
-    yearsEl.appendChild(h);
-    yearsEl.appendChild(tl);
-  });
-
-  if(events.length === 0){
-    yearsEl.innerHTML = `<div class="item"><div class="ttl">표시할 항목이 없습니다.</div></div>`;
+  function finishSoon(){
+    clearTimeout(timer);
+    // 페이드아웃
+    intro.style.transition = 'opacity .45s ease';
+    intro.style.opacity = '0';
+    setTimeout(()=>{ intro.remove(); }, 460);
   }
-}
 
-/* ============================ 호출부 ============================ */
-// 8월 월간 타임라인
-renderMonthTimeline('2025-08', 'augTimeline');
-
-// 5~7월만 묶어서 연도별 연표 (8월은 안 들어감)
-renderYearsTimeline(['2025-05','2025-06','2025-07'], 'years');
-
-// (선택) 힌트 문구 자동 세팅
-const hintEls = document.querySelectorAll('.hint');
-hintEls.forEach(el => {
-  if(el.parentElement?.id === 'timeline'){
-    el.textContent = '표시 범위: 2025년 5월 ~ 7월';
-  } else if (el.parentElement?.id === 'aug-month-timeline'){
-    el.textContent = '표시 범위: 2025년 8월';
-  }
-});
+  // 안전: 리사이즈 시 가장자리 클리핑 방지 (패딩이 있지만 혹시 몰라서)
+  window.addEventListener('resize', ()=>{/* no-op, 패딩으로 충분 */});
+})();
 </script>
-</body></html>
+<div class="games-hub">
+<div class="games-hub-header">수수랜드 – 데모 게임 모음</h1>
+
+    <div class="language-toggle">
+        <button class="language-btn active" onclick="setLanguage('ko')">한국어</button>
+        <button class="language-btn" onclick="setLanguage('en')">English</button>
+    </div>
+</div>
+    
+    
+    <div class="games-grid">
+        
+
+<!-- 모음퀴즈 게임 -->
+        <div class="game-card" onclick="location.href='https://moeum-quiz.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤</div>
+                <div class="game-title">
+                    <button class="star-button">BEST</button>
+    <span class="ko-text">모음 퀴즈</span>
+                    <span class="en-text hidden"> Moeum quiz</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+           <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
+               <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+             </div>
+                <div class="en-text hidden">
+                    
+    <strong>Korean Hangman!</strong><br>
+                                <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+                </div>
+            <div class="game-difficulty">
+                <span class="ko-text">모음퀴즈 하기</span>
+                <span class="en-text hidden">play Moeum-quiz</span>
+            </div>
+            </div>
+        </div>
+<!-- 오목 게임 -->
+   <div class="game-card" onclick="location.href='https://omok-six.vercel.app'">
+            <div class="game-card-header">
+              <div class="game-emoji">👤 👥</div><br><br>
+                <div class="game-title">
+                    <button class="star-button">BEST</button>
+                  <span class="ko-text">오목</span>
+                    <span class="en-text hidden">OMOK</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 돌 5개를 한 줄로 놓으면 이겨요.</strong><br>
+        <div align="center">
+  <img src="images/omok.jpeg" width="150" alt="오목"><br>
+</div>
+          </div>
+                <div class="en-text hidden">
+       <strong>Get 5 stones in a row to win!<br></strong>
+<div align="center">
+  <img src="images/omok.jpeg" width="150" alt="오목"><br>
+</div></div>
+<div class="game-difficulty">
+                <span class="ko-text">오목 하기</span>
+                <span class="en-text hidden">play Omok</span>
+            </div>
+            
+            </div>
+        </div>
+
+<!-- 야구시리즈 -->
+   <div class="game-card" onclick="location.href='https://yagoo.vercel.app'">
+            <div class="game-card-header">
+              <div class="game-emoji">👤</div><br><br>
+                <div class="game-title">
+                    <button class="star-button">NEW</button>
+                    <span class="ko-text">야구시리즈</span>
+                    <span class="en-text hidden"> Baseball</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 비밀코드를 맞추는 퍼즐</strong><br>
+        <div align="center">
+  <img src="images/yagoo.png" width="150" alt="숫자야구"><br>
+</div>
+          </div>
+                <div class="en-text hidden">
+       <strong>Guess the secret code puzzle <br></strong>
+<div align="center">
+  <img src="images/yagoo.png" width="150" alt="숫자야구"><br>
+</div></div>
+<div class="game-difficulty">
+                <span class="ko-text">야구 시리즈 하기</span>
+                <span class="en-text hidden">Play BaseBall Series</span>
+            </div>
+            
+            </div>
+        </div>
+ <!-- 워퍼즈 게임 -->
+        <div class="game-card" onclick="location.href='https://worpuzz.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤</div>
+                <div class="game-title">
+                    <span class="ko-text">워퍼즈  </span>
+                    <span class="en-text hidden">WORPUZZ </span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                    <strong>격자 속에 숨어있는 단어를 찾으세요.</strong><br>
+                <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="워퍼즈"><br>
+</div>
+                </div>
+                <div class="en-text hidden">
+                    <strong>Find hidden letters in the grid</strong><br>
+                 <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="워퍼즈"><br>
+</div>
+                </div>
+            <div class="game-difficulty">
+                <span class="ko-text">워퍼즈 하기</span>
+                <span class="en-text hidden">play Worpuzz</span>
+            </div>
+            </div>
+        </div><!-- 하루 모음 게임 -->
+        <div class="game-card" onclick="location.href='https://haru-seven.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤</div>
+                <div class="game-title">
+                    <span class="ko-text">하루 모음</span>
+                    <span class="en-text hidden"> Haru Moeum </span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+           <strong>오늘의 모음 퀴즈 </strong><br>
+               <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+             </div>
+                <div class="en-text hidden">
+                    <strong>Today's Moeum Quiz</strong><br>
+                                <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+                </div>
+            <div class="game-difficulty">
+                <span class="ko-text"> 하루 모음 하기</span>
+                <span class="en-text hidden">play Haru-Moeum</span>
+            </div>
+            </div>
+        </div>
+<!-- 둘이 모음 게임 -->
+        <div class="game-card" onclick="location.href='https://doori-psi.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👥</div>
+                <div class="game-title">
+                    <span class="ko-text">둘이 모음</span>
+                    <span class="en-text hidden"> Doori Moeum </span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+           <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
+               <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+             </div>
+                <div class="en-text hidden">
+                    <strong>Korean Hangman!</strong><br>
+                                <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="moeum quiz"><br>
+</div>
+                </div>
+            <div class="game-difficulty">
+                <span class="ko-text">둘이 모음 하기</span>
+                <span class="en-text hidden">play Doori Moeum</span>
+            </div>
+            </div>
+        </div>
+
+    <!-- 트링클 게임 -->
+        <div class="game-card" onclick="location.href='https://trinkle-opal.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤 👥</div><br><br>
+                <div class="game-title">
+                    <span class="ko-text">트링클</span>
+                    <span class="en-text hidden">TRINKLE</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                    <strong>점과 점을 이어 삼각형을 그리세요.</strong><br>
+         <div align="center">
+  <img src="images/trinkle.png" width="150" alt="트링클"><br>
+</div>
+                     </div>
+                <div class="en-text hidden">
+                    <strong>Connect dots to form triangles </strong>
+<div align="center">
+  <img src="images/trinkle.png" width="150" alt="트링클"><br>
+</div>
+                </div>
+<div class="game-difficulty">
+                <span class="ko-text">트링클 하기</span>
+                <span class="en-text hidden">play trinkle</span>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- 넘즐 게임 -->
+        <div class="game-card" onclick="location.href='https://numzzle.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤</div>
+                <div class="game-title">
+                    <span class="ko-text">넘즐</span>
+                    <span class="en-text hidden">NUMZZLE</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 숫자 카드와 연산카드로 수식을 만들기 </strong><br>
+                   <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                </div>
+                <div class="en-text hidden">
+                    <strong>Create equations using number and operation cards</strong><br>
+<div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                </div>
+<div class="game-difficulty">
+                <span class="ko-text">넘즐 하기</span>
+                <span class="en-text hidden">play Numzzle</span>
+            </div>
+            
+            </div>
+        </div>
+<!-- 넘털 게임 -->
+<div class="game-card" onclick="location.href='https://numtter.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👤</div>
+                <div class="game-title">
+                    <span class="ko-text">넘털 </span>
+                    <span class="en-text hidden">NUMTTER</span>
+                </div>
+            </div>
+<h2></h2>
+<div class="game-description">
+    
+</div>
+<div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 숫자카드를 다  털면 성공  </strong><br>
+   <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                 
+ </div>
+                <div class="en-text hidden">
+                    <strong>Create equations using number and operation cards</strong><br>
+                     <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                </div>
+<div class="game-difficulty">
+                <span class="ko-text">넘털 하기</span>
+                <span class="en-text hidden">play numtter</span>
+            </div>
+            
+            </div>
+        </div>
+    
+        <!-- 넘플 게임 -->
+        <div class="game-card" onclick="location.href='https://numpple.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👥</div>
+                <div class="game-title">
+                    <span class="ko-text">넘플 </span>
+                    <span class="en-text hidden">NUMPPLE</span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                   <strong> 숫자 카드와 연산카드로 수식을 만들기 </strong><br>
+                    <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                </div>
+                <div class="en-text hidden">
+                    <strong>Create equations using number and operation cards</strong><br>
+                    <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="넘즐"><br>
+</div>
+                </div>
+<div class="game-difficulty">
+                <span class="ko-text">넘플 하기</span>
+                <span class="en-text hidden">play Numpple</span>
+            </div>
+            
+            </div>
+        </div>
+
+            
+       
+   
+<!-- 워퍼즈 메이트 게임 -->
+        <div class="game-card" onclick="location.href='https://worpuzzmate.vercel.app'">
+            <div class="game-card-header">
+                <div class="game-emoji">👥</div><br><br>
+                <div class="game-title">
+                    <span class="ko-text">워퍼즈 메이트 </span>
+                    <span class="en-text hidden">WORPUZZ MATE </span>
+                </div>
+            </div>
+            <div class="game-description-text">
+                <div class="ko-text">
+                    <strong>격자 속에 숨어있는 단어를 찾으세요.</strong><br>
+                <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="워퍼즈"><br>
+</div>
+                     </div>
+                <div class="en-text hidden">
+                    <strong>Find hidden letters in the grid</strong><br>
+<div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="워퍼즈"><br>
+</div>
+                </div>
+            <div class="game-difficulty">
+                <span class="ko-text">워퍼즈메이트 하기</span>
+                <span class="en-text hidden">play WorpuzzMate</span>
+            </div>
+            </div>
+        </div>
+
+ 
+
+
+
+<!-- 푸터 영역 -->
+  <div class="footer">
+    
+    <div class="ko-text">
+
+<span class="ko-text" onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;">블로그</span>
+     |
+<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;">유튜브</span>
+      |
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/News.html'" style="cursor:pointer;">수수랜드 소식</span>
+    <br>
+ <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;"> 수수랜드 운영원칙</span>|
+    <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;">개인정보 처리방침</span><br>
+            <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;">연락처와 지원</span>|
+     <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;"> 광고 문의</span><br>
+   <span onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;">개발자 게임 모집</span>
+ <p>© 2025 한수수 . All rights reserved.</p><br>
+    
+  </div>
+
+<div class="en-text hidden">
+<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;">YouTube</span>
+      |
+        <span onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;"> Blog</span>
+|
+
+     <span onclick="location.href='https://soosoohan.github.io/soosooland/News.html'" style="cursor:pointer;">Soosooland News</span>
+    |
+<span onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;">Operating Principles</span>
+     <br>
+        <span onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;">Privacy Policy</span><br>
+       <span onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;">Contact & Support</span>
+<br><span onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;">Advertisement Inquiry</span>
+<br>
+<span onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;">Dev Game Submission</span>
+<p>© 2025 Soosoo Han . All rights reserved.</p> 
+
+</div>
+
+        
+</div>
+<script>
+    function setLanguage(lang) {
+        const koTexts = document.querySelectorAll('.ko-text');
+        const enTexts = document.querySelectorAll('.en-text');
+        const koBtns = document.querySelector('.language-btn:first-child');
+        const enBtns = document.querySelector('.language-btn:last-child');
+
+        if (lang === 'ko') {
+            koTexts.forEach(el => el.classList.remove('hidden'));
+            enTexts.forEach(el => el.classList.add('hidden'));
+            koBtns.classList.add('active');
+            enBtns.classList.remove('active');
+            document.title = '수수랜드';
+            document.querySelector('.hub-title').textContent = '수수랜드 – 데모 게임 모음';
+        } else {
+            koTexts.forEach(el => el.classList.add('hidden'));
+            enTexts.forEach(el => el.classList.remove('hidden'));
+            koBtns.classList.remove('active');
+            enBtns.classList.add('active');
+            document.title = 'Soosoo\'s Game Terminal';
+            document.querySelector('.hub-title').textContent = 'Soosoo Land – Demo Game Collection';
+        }
+    }
+
+    
+</script>
+
+
+</body>
+</html>
