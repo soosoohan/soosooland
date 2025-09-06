@@ -99,7 +99,16 @@
         box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
-    .info-card {
+    .test-card {
+    cursor: default;
+}
+
+.test-card:hover {
+    transform: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.info-card {
         cursor: default;
     }
 
@@ -160,6 +169,142 @@
         display: none;
     }
 
+/* 게임 추천 테스트 스타일 */
+.test-question {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+    margin-bottom: 20px;
+}
+
+.test-question.active {
+    display: block;
+}
+
+.test-question h3 {
+    color: #2e8b8b;
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-align: center;
+    font-weight: bold;
+}
+
+.test-options {
+    display: grid;
+    gap: 10px;
+}
+
+.test-option {
+    background: #f8f9ff;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+}
+
+.test-option:hover {
+    border-color: #2e8b8b;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(46, 139, 139, 0.2);
+}
+
+.test-option.selected {
+    background: #2e8b8b;
+    color: white;
+    border-color: #2e8b8b;
+}
+
+.option-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2e8b8b;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    margin-right: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.test-option.selected .option-number {
+    background: white;
+    color: #2e8b8b;
+}
+
+.option-text {
+    flex: 1;
+    font-weight: 500;
+}
+
+.test-result {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.test-result.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.result-title {
+    color: #2e8b8b;
+    margin-bottom: 15px;
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+    font-weight: bold;
+}
+
+.recommended-game {
+    background: linear-gradient(135deg, #2e8b8b, #20676b);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+}
+
+.test-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.test-btn {
+    background: #2e8b8b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.test-btn:hover {
+    background: #20676b;
+    transform: translateY(-2px);
+}
+
+.test-btn.secondary {
+    background: #6c757d;
+}
+
+.test-btn.secondary:hover {
+    background: #5a6268;
+}
+
+
+
 /* 별모양 버튼들 */
     .star-button {
         background: linear-gradient(45deg, #FFD700, #FFA500);
@@ -198,7 +343,16 @@
     .footer a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 668px) {
+    
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+@media (max-width: 668px) {
         body {
             padding: 10px;
         }
@@ -213,13 +367,32 @@
         }
     }
 
-    
+    .test-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .test-btn {
+        width: 80%;
+        max-width: 200px;
+    }
+}
+
     @media (max-width: 480px) {
         .hub-title {
             margin-top: 20px;
         }
     }
 
+    .language-toggle {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .games-hub-header {
+        flex-direction: column;
+    }
+}
     @media (max-height: 500px) and (orientation: landscape) {
         body {
             min-height: auto;
@@ -361,7 +534,86 @@
     
     <div class="games-grid">
         
+    <!-- 게임 추천 테스트 카드 -->
+    <div class="game-card test-card">
+        
+        <!-- 첫 번째 질문 -->
+        <div class="test-question active" id="question1">
+            <h3 class="ko-text">게임에서 얻고 싶은 능력이 있나요?</h3>
+            <h3 class="en-text hidden">What ability do you want to gain from games?</h3>
+            <div class="test-options">
+                <div class="test-option" data-value="vocabulary">
+                    <span class="option-number">1</span>
+                    <span class="option-text ko-text">어휘력과 상식</span>
+                    <span class="option-text en-text hidden">Vocabulary & Knowledge</span>
+                </div>
+                <div class="test-option" data-value="calculation">
+                    <span class="option-number">2</span>
+                    <span class="option-text ko-text">연산능력</span>
+                    <span class="option-text en-text hidden">Calculation Skills</span>
+                </div>
+                <div class="test-option" data-value="logic">
+                    <span class="option-number">3</span>
+                    <span class="option-text ko-text">논리력과 추리력</span>
+                    <span class="option-text en-text hidden">Logic & Reasoning</span>
+                </div>
+                <div class="test-option" data-value="reading">
+                    <span class="option-number">4</span>
+                    <span class="option-text ko-text">예측력과 수 읽기 능력</span>
+                    <span class="option-text en-text hidden">Prediction & Pattern Reading</span>
+                </div>
+            </div>
+        </div>
 
+        <!-- 두 번째 질문 -->
+        <div class="test-question" id="question2">
+            <h3 class="ko-text">지금 게임을 어떻게 하고 싶으신가요?</h3>
+            <h3 class="en-text hidden">How do you want to play right now?</h3>
+            <div class="test-options">
+                <div class="test-option" data-value="alone">
+                    <span class="option-number">1</span>
+                    <span class="option-text ko-text">혼자서 차분하게</span>
+                    <span class="option-text en-text hidden">Alone and calmly</span>
+                </div>
+                <div class="test-option" data-value="together">
+                    <span class="option-number">2</span>
+                    <span class="option-text ko-text">둘이서 재미있게</span>
+                    <span class="option-text en-text hidden">Together and fun</span>
+                </div>
+                <div class="test-option" data-value="computer">
+                    <span class="option-number">3</span>
+                    <span class="option-text ko-text">컴퓨터와 쫄깃하게</span>
+                    <span class="option-text en-text hidden">Challenge vs Computer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 결과 화면 -->
+        <div class="test-result" id="result">
+            <h3 class="result-title ko-text">추천 게임</h3>
+            <h3 class="result-title en-text hidden">Recommended Game</h3>
+            <div class="recommended-game" id="gameTitle"></div>
+            <div class="test-buttons">
+                <button class="test-btn secondary ko-text" onclick="restart()">다시 테스트</button>
+                <button class="test-btn secondary en-text hidden" onclick="restart()">Test Again</button>
+            </div>
+        </div>
+
+ 
+<div class="test-buttons" id="navigationButtons">
+    <button class="test-btn secondary" onclick="previousQuestion()" id="prevBtn" style="display: none;">
+        <span class="ko-text">이전</span>
+        <span class="en-text hidden">Previous</span>
+    </button>
+    <button class="test-btn" onclick="nextQuestion()" id="nextBtn">
+        <span class="ko-text">다음</span>
+        <span class="en-text hidden">Next</span>
+    </button>
+</div>
+       
+    </div>
+
+ 
 <!-- 모음퀴즈 게임 -->
         <div class="game-card" onclick="location.href='https://moeum-quiz.vercel.app'">
             <div class="game-card-header">
@@ -428,7 +680,7 @@
               <div class="game-emoji">👤</div><br><br>
                 <div class="game-title">
                     <button class="star-button">NEW</button>
-                    <span class="ko-text">야구시리즈</span>
+                    <span class="ko-text">야구게임</span>
                     <span class="en-text hidden"> Baseball</span>
                 </div>
             </div>
@@ -739,6 +991,62 @@
         
 </div>
 <script>
+  let currentQuestion = 1;
+    let answers = {};
+    const totalQuestions = 2;
+
+    // 게임 데이터 (한국어/영어)
+    const games = {
+        'vocabulary-alone': {
+            ko: '모음퀴즈/하루모음',
+            en: 'Moeum Quiz/Haroo Moeum'
+        },
+        'vocabulary-together': {
+            ko: '워퍼즈 메이트 / 둘이 모음',
+            en: 'Worpuzz Mate / Doori Moeum'
+        },
+        'vocabulary-computer': {
+            ko: '워퍼즈',
+            en: 'Worpuzz'
+        },
+        'calculation-alone': {
+            ko: '넘털',
+            en: 'Numtter'
+        },
+        'calculation-together': {
+            ko: '넘플 ',
+            en: 'Numpple/ NumppleX'
+        },
+        'calculation-computer': {
+            ko: '넘즐',
+            en: 'Numzzle / NumzzleX'
+        },
+        'logic-alone': {
+            ko: '야구게임',
+            en: 'Baseball Game'
+        },
+        'logic-together': {
+            ko: '야구게임 ',
+            en: 'Baseball Game'
+        },
+        'logic-computer': {
+            ko: '야구게임',
+            en: 'Baseball Game'
+        },
+        'reading-alone': {
+            ko: '트링클 / 오목',
+            en: 'Trinkle / Omok'
+        },
+        'reading-together': {
+            ko: '트링클 / 오목',
+            en: 'Trinkle / Omok'
+        },
+        'reading-computer': {
+            ko: '트링클 / 오목',
+            en: 'Trinkle / Omok'
+        }
+    };
+
     function setLanguage(lang) {
         const koTexts = document.querySelectorAll('.ko-text');
         const enTexts = document.querySelectorAll('.en-text');
@@ -751,20 +1059,120 @@
             koBtns.classList.add('active');
             enBtns.classList.remove('active');
             document.title = '수수랜드';
-            document.querySelector('.hub-title').textContent = '수수랜드 – 데모 게임 모음';
         } else {
             koTexts.forEach(el => el.classList.add('hidden'));
             enTexts.forEach(el => el.classList.remove('hidden'));
             koBtns.classList.remove('active');
             enBtns.classList.add('active');
             document.title = 'Soosoo\'s Game Terminal';
-            document.querySelector('.hub-title').textContent = 'Soosoo Land – Demo Game Collection';
         }
     }
 
-    
-</script>
+    function showQuestion(questionNum) {
+        document.querySelectorAll('.test-question').forEach(q => q.classList.remove('active'));
+        document.getElementById(`question${questionNum}`).classList.add('active');
+        
+        // 버튼 상태 업데이트
+        const prevBtn = document.getElementById('prevBtn');
+        const prevBtnEn = document.getElementById('prevBtnEn');
+        const nextBtn = document.getElementById('nextBtn');
+        const nextBtnEn = document.getElementById('nextBtnEn');
+        
+        if (questionNum === 1) {
+    prevBtn.style.display = 'none';
+    prevBtnEn.style.display = 'none';  
+} else {
+    prevBtn.style.display = 'inline-block';
+    prevBtnEn.style.display = 'inline-block';  
+        }
+        
+        if (questionNum === totalQuestions && Object.keys(answers).length === totalQuestions) {
+            nextBtn.textContent = '결과 보기';
+            nextBtnEn.textContent = 'Show Result';
+        } else {
+            nextBtn.textContent = '다음';
+            nextBtnEn.textContent = 'Next';
+        }
+    }
 
+    function nextQuestion() {
+        const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
+        const selectedOption = currentQuestionElement.querySelector('.test-option.selected');
+        
+        if (!selectedOption) {
+            const isKorean = !document.querySelector('.ko-text').classList.contains('hidden');
+            alert(isKorean ? '선택지를 골라주세요!' : 'Please select an option!');
+            return;
+        }
+        
+        // 답변 저장
+        if (currentQuestion === 1) {
+            answers.interest = selectedOption.dataset.value;
+        } else if (currentQuestion === 2) {
+            answers.mode = selectedOption.dataset.value;
+        }
+        
+        if (currentQuestion < totalQuestions) {
+            currentQuestion++;
+            showQuestion(currentQuestion);
+        } else {
+            showResult();
+        }
+    }
+
+    function previousQuestion() {
+        if (currentQuestion > 1) {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+        }
+    }
+
+    function showResult() {
+        document.querySelectorAll('.test-question').forEach(q => q.classList.remove('active'));
+        document.getElementById('navigationButtons').style.display = 'none';
+        document.getElementById('result').classList.add('active');
+        
+        // 게임 추천
+        const gameKey = `${answers.interest}-${answers.mode}`;
+        const recommendedGame = games[gameKey] || {
+            ko: '추천 게임을 찾을 수 없습니다',
+            en: 'No game recommendation found'
+        };
+        
+        const isKorean = !document.querySelector('.ko-text').classList.contains('hidden');
+        document.getElementById('gameTitle').textContent = isKorean ? recommendedGame.ko : recommendedGame.en;
+    }
+
+    function restart() {
+        currentQuestion = 1;
+        answers = {};
+        document.getElementById('result').classList.remove('active');
+        document.getElementById('navigationButtons').style.display = 'flex';
+        document.querySelectorAll('.test-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+        showQuestion(1);
+    }
+
+    // 옵션 클릭 이벤트
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.test-option')) {
+            const option = e.target.closest('.test-option');
+            const questionElement = option.closest('.test-question');
+            
+            // 같은 질문의 다른 선택지들 비활성화
+            questionElement.querySelectorAll('.test-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // 클릭한 선택지 활성화
+            option.classList.add('selected');
+        }
+    });
+
+    // 초기화
+    showQuestion(1);
+</script>
 
 </body>
 </html>
