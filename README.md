@@ -19,7 +19,7 @@
 # Soosoo Land
 수수랜드는 저작권을 존중하며, 교육·두뇌개발 게임을 함께 나누는 플랫폼입니다.    
 Soosooland respects copyright and serves as a platform for sharing educational and brain-training games.   
-Boost Your Brain and Learn at the Same Time! ✨ 
+Boost Your Brain and Learn at the Same Time! ✨      
 온라인 교육·두뇌개발 게임 플랫폼 수수랜드 소개  
 Introducing the Online Educational & Brain Development Game Platform, Soosoland. 
    
