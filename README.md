@@ -2,9 +2,6 @@
 본 저장소의 소스코드와 자료는 작성자(수수)의 허락 없이 **복사·수정·배포·상업적 이용**할 수 없습니다.  
 이 저장소는 오픈소스가 아니며, 교육 및 참고 목적으로만 열람 가능합니다.
 
-# Soosoo Land
-수수랜드는 저작권을 존중하며, 교육·두뇌개발 게임을 함께 나누는 플랫폼입니다.  
-Soosooland respects copyright and serves as a platform for sharing educational and brain-training games.
 
 >---
 >
@@ -18,6 +15,75 @@ Soosooland respects copyright and serves as a platform for sharing educational a
 >in legal consequences.
 >
 >-----
+
+# Soosoo Land
+수수랜드는 저작권을 존중하며, 교육·두뇌개발 게임을 함께 나누는 플랫폼입니다.    
+Soosooland respects copyright and serves as a platform for sharing educational and brain-training games.   
+Boost Your Brain and Learn at the Same Time! ✨ 
+온라인 교육·두뇌개발 게임 플랫폼 수수랜드 소개  
+Introducing the Online Educational & Brain Development Game Platform, Soosoland. 
+   
+수수랜드는 다운로드 없이, 브라우저에서 바로 즐길 수 있는 교육·두뇌개발용 게임 플랫폼이에요.  
+학습에 도움을 주는 단어 게임부터 추리, 전략, 연산 게임까지 다양하게 준비되어 있어 아이들의 학습 도우미로도 좋고, 어른들의 두뇌 건강에도 딱 맞습니다.  
+Soosoland is an educational and brain-training game platform that runs directly on your browser without any downloads.  
+It offers a wide range of word, logic, strategy, and math games—perfect for children’s learning and for adults’ brain health.  
+   
+🎲 수수랜드에서 즐길 수 있는 게임  
+🎲 Games Available on Soosoland  
+   
+• 단어 게임 (Word Games): 워퍼즈(Worpuzz), 워퍼즈메이트(Worpuzz Mate), 모음퀴즈(Moeum Quiz)   
+   
+• 연산 게임 (Math Games): 넘즐(Numzle), 넘즐 X(Numzle X), 넘플(Numple), 넘플 X(Numple X), 넘털(Numtter)  
+   
+• 추리 게임 (Logic Games): 숫자야구(Number Baseball), 한글단어야구(Korean Word Baseball), 영어단어야구(English Word Baseball) 
+   
+• 전략 게임 (Strategy Games): 트링클(Trinkle), 오목(Gomoku)   
+   
+👦 어린이들에게는 어휘력과 사고력 향상에,  
+👵 어르신들에게는 두뇌 건강 관리에 도움이 됩니다.  
+👦 Great for children’s vocabulary and logical thinking.  
+👵 Also helpful for seniors to maintain brain health.  
+   
+📌 수수랜드만의 특징  
+📌 Features of Soosoland  
+   
+• 저작권 등록 완료 (2025년 8월-9월)   
+워퍼즈 시리즈, 모음퀴즈, 트링클은 8월에, 넘즐 시리즈는 9월에 저작권 등록을 마쳐 독창성과 소유권을 인정받았습니다.  
+• Official Copyright Registration (August-September 2025)   
+The Worpuzz series, Vowel Quiz, and Trinkle were registered in August,   
+while the Numzzle series was registered in September, ensuring originality and ownership for all titles.​​​​​​​​​​​​​​​​   
+  
+• 건강한 게임 환경    
+중독성을 줄이고, 과도한 몰입을 방지할 수 있도록 설계되었습니다.   
+• Healthy Gaming Environment.   
+Designed to minimize addiction and prevent excessive immersion.   
+    
+• 한국어·영어 지원   
+글로벌 이용자를 위해 대부분의 게임에 한국어와 영어 설명이 제공됩니다.    
+• Bilingual Support     
+Most games provide both Korean. and English instructions for global users.   
+    
+• 고전 게임의 현대적 재해석    
+오목, 야구류 게임은 친숙하면서도 새로운 방식으로 즐길 수 있도록 구성했습니다.   
+• Modern Twist on Classics    
+Games like Gomoku and Baseball-style logic games are reinterpreted for modern gameplay.  
+   
+🌐 수수랜드 접속 방법
+🌐 How to Access Soosoland
+ 
+ https://soosoohan.github.io/soosooland/    
+• 크롬, 사파리 등 브라우저에서 바로 접속 가능   
+• 다운로드 불필요!   
+• 언제 어디서든 가볍게 두뇌 개발 게임을 즐길 수 있습니다.  
+• Accessible via Chrome, Safari, or other browsers   
+• No downloads required!   
+• Play brain-training games anytime, anywhere.   
+     
+그렇다면 지금 바로 수수랜드에서 만나보세요!     
+Then don’t wait—start playing now on Soosoland!    
+ https://soosoohan.github.io/soosooland/   
+
+---
 
 ## 👤 모음퀴즈 (Moeum Quiz)과 하루 모음(Haroo Moeum)
 
@@ -97,7 +163,7 @@ The goal is to connect dots and create as many non-overlapping triangles as poss
 
 -----
 
-## 👤🆚🤖 🧩 워퍼즈 (Worpuzz) 시리즈
+## 👤🆚🤖  워퍼즈 (Worpuzz) 시리즈
 
 Worpuzz는 지뢰찾기에서 영감을 받은 단어 퍼즐 게임으로, 격자를 탐험하여 숨겨진 단어를 찾는 게임입니다!  
 Worpuzz is a word puzzle game inspired by Minesweeper, where you explore a grid to uncover hidden words!
@@ -353,6 +419,7 @@ Expert: Very strong and rarely makes mistakes.
 - **단일 HTML**로 오프라인 실행 가능
 - **전통적인 단어야구 게임에 한글단어를 넣고 모음을 공개하고 아래쪽에 자음버튼을 넣어 난이도를 줄였습니다.
 - **한국어기초사전과  한국어능력시험용 단어들이 워드풀에 들어갔습니다.  
+
 ## 🎮 플레이 방법
 
 1. 상단에서 **글자 수**(2–5글자)를 선택하세요.  
