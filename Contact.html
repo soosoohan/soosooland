@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +24,19 @@
     padding:1rem;
     margin:1.2rem 0;
   }
-
-nav {
-      margin: 1rem 0;
-    }
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #3498db;
-      font-weight: 500;
-    }
-    nav a[aria-current="page"] {
-      color: #2c3e50;
-      font-weight: bold;
-    }
-    
+  nav {
+    margin: 1rem 0;
+  }
+  nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+  }
+  nav a[aria-current="page"] {
+    color: #2c3e50;
+    font-weight: bold;
+  }
   .email {
     font-weight: bold;
     color: #e74c3c;
@@ -48,19 +47,18 @@ nav {
 <body>
   <h1>Contact & Support</h1>
 
-<nav>
-        <a href="Opera.html" aria-current="page">Operating Principles</a>
-        <a href="Priva.html">Privacy Policy</a>
-        <a href="Contact.html">Contact & Support</a>
-      </nav>
+  <nav>
+    <a href="Opera.html">Operating Principles</a>
+    <a href="Priva.html">Privacy Policy</a>
+    <a href="Contact.html" aria-current="page">Contact & Support</a>
+  </nav>
       
   <p>For any questions, feedback, or issues regarding Soosooland, please use the contact information below.</p>
 
-  <div class="box"  style="border:1px solid #ddd; padding:10px; border-radius:6px; display:inline-block;">
-  <span id="email">soosooland2025@gmail.com</span>
-  <button style="margin-left:10px; padding:4px 8px; cursor:pointer;" onclick="copyEmail()">Copy</button>
-
-  <p>Please include a clear subject line such as <em>[General]</em>, <em>[Support]</em>, or <em>[Report]</em> so we can respond quickly.</p>
+  <div class="box">
+    <span id="email">soosooland2025@gmail.com</span>
+    <button style="margin-left:10px; padding:4px 8px; cursor:pointer;" onclick="copyEmail()">Copy</button>
+    <p>Please include a clear subject line such as <em>[General]</em>, <em>[Support]</em>, or <em>[Report]</em> so we can respond quickly.</p>
   </div>
 
   <h2>Support Categories</h2>
@@ -76,12 +74,10 @@ nav {
   <p>수수랜드와 관련된 질문, 피드백, 문제 제기는 아래 이메일을 이용해 주세요.</p>
 
   <div class="box">
-    <p>
-
-  <span id="email">soosooland2025@gmail.com</span>
-  <button style="margin-left:10px; padding:4px 8px; cursor:pointer;" onclick="copyEmail()">Copy</button>   <p>제목에 <em>[일반]</em>, <em>[지원]</em>, <em>[신고]</em> 와 같이 구분을 적어주시면 더 빠르게 대응할 수 있습니다.</p>
+    <span id="email-kr">soosooland2025@gmail.com</span>
+    <button style="margin-left:10px; padding:4px 8px; cursor:pointer;" onclick="copyEmailKr()">Copy</button>
+    <p>제목에 <em>[일반]</em>, <em>[지원]</em>, <em>[신고]</em> 와 같이 구분을 적어주시면 더 빠르게 대응할 수 있습니다.</p>
   </div>
-
 
   <h2>지원 범주</h2>
   <ul>
@@ -90,15 +86,20 @@ nav {
     <li><strong>저작권 및 신고:</strong> 무단 업로드, 부적절한 콘텐츠, 광고 관련 신고</li>
   </ul>
 
-
-
-<script>
-function copyEmail() {
-  const email = document.getElementById("email").textContent;
-  navigator.clipboard.writeText(email).then(() => {
-    alert("Email copied: " + email);
-  });
-}
-</script>
+  <script>
+  function copyEmail() {
+    const email = document.getElementById("email").textContent;
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied: " + email);
+    });
+  }
+  
+  function copyEmailKr() {
+    const email = document.getElementById("email-kr").textContent;
+    navigator.clipboard.writeText(email).then(() => {
+      alert("이메일이 복사되었습니다: " + email);
+    });
+  }
+  </script>
 </body>
 </html>
