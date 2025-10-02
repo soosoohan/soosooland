@@ -64,7 +64,7 @@
         padding: 20px;
         overflow-y: auto;
     }
-.games-hub-header {
+  .games-hub-header {
     display: flex;
     align-items: center;      /* 수직 가운데 정렬 */
     justify-content: center;  /* 기본적으로 가운데 정렬 */
@@ -72,7 +72,7 @@
     margin-bottom: 20px;
       font-size: clamp(1.3rem, 3.7vw, 1.9rem);
         color: #f0f8ff;
-  }
+   }
 
   .hub-title {
     margin: 0;
@@ -83,13 +83,13 @@
         color: #f0f8ff;
    }
 
-.language-toggle {
+  .language-toggle {
     position: absolute;
     right: 0;                 /* 오른쪽으로 고정 */
-}
+   }
     
  
-    .language-btn {
+  .language-btn {
         background: rgba(255,255,255,0.2);
         color: #f0f8ff;
         border: 2px solid rgba(255,255,255,0.3);
@@ -101,7 +101,7 @@
         transition: all 0.3s ease;
     }
 
-    .language-btn.active {
+   .language-btn.active {
         background: rgba(255,255,255,0.9);
         color: #2e8b8b;
         border-color: rgba(255,255,255,0.9);
@@ -132,15 +132,15 @@
     }
 
     .test-card {
-    cursor: default;
-}
+        cursor: default;
+    }
 
-.test-card:hover {
-    transform: none;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-}
+    .test-card:hover {
+        transform: none;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
 
-.info-card {
+    .info-card {
         cursor: default;
     }
 
@@ -173,7 +173,7 @@
         font-size: clamp(0.9rem, 2.2vw, 1rem);
         word-wrap: break-word;
       text-align: center;    
-}
+    }
 
     .game-difficulty {
         background: #2e8b8b;
@@ -335,8 +335,6 @@
     background: #5a6268;
 }
 
-
-
 /* 별모양 버튼들 */
     .star-button {
         background: linear-gradient(45deg, #FFD700, #FFA500);
@@ -350,7 +348,7 @@
         margin: 5px;
         transition: all 0.3s ease;
         font-size: clamp(0.9rem, 2.2vw, 1rem);
- }
+    }
 
     .star-button:hover {
         transform: translateY(-3px);
@@ -358,7 +356,7 @@
     }
 
     
-.footer {
+    .footer {
       background: #2e8b8b;
       text-align: center;
       font-size: 14px;
@@ -369,7 +367,7 @@
       max-width: none;
       margin-left: calc(-50vw + 50%); /* 중앙 정렬 */
       padding: 40px 20px;
-}
+    }
 
     .footer a {
       color: white;
@@ -387,8 +385,6 @@
 }
 
 
-
-
 @media (max-width: 668px) {
         body {
             padding: 10px;
@@ -402,33 +398,32 @@
         .game-card {
             padding: 15px;
         }
-    }
 
     .test-buttons {
         flex-direction: column;
         align-items: center;
-    }
+       }
 
     .test-btn {
         width: 80%;
         max-width: 200px;
-    }
+      }
 }
 
     @media (max-width: 480px) {
         .hub-title {
             margin-top: 20px;
-        }
-    }
+      }
+    
 
     .language-toggle {
         position: static;
         margin-top: 10px;
-    }
+      }
 
     .games-hub-header {
         flex-direction: column;
-    }
+      }
 }
     @media (max-height: 500px) and (orientation: landscape) {
         body {
@@ -560,344 +555,350 @@
 })();
 </script>
 <div class="games-hub">
-<div class="games-hub-header">Soosooland</h1>
-
+  <div class="games-hub-header">Soosooland</h1>
     <div class="language-toggle">
         <button class="language-btn active" onclick="setLanguage('ko')">한국어</button>
         <button class="language-btn" onclick="setLanguage('en')">English</button>
     </div>
-</div>
+  </div>
     
     
-    <div class="games-grid">
+  <div class="games-grid">
         
-     
-<!-- 모음퀴즈 게임 -->
-        <div class="game-card" onclick="location.href='https://moeum-quiz.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👤</div>
-                <div class="game-title">
+ <!-- 야구시리즈 -->
+    <div class="game-card" onclick="location.href='https://yagoo.vercel.app'">
+       <div class="game-card-header">
+          <div class="game-emoji">⚾</div><br><br>
+          <div class="game-title">
                     <button class="star-button">BEST</button>
-    <span class="ko-text">모음 퀴즈</span>
-                    <span class="en-text hidden"> Moeum quiz</span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-           <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
+                    <span class="ko-text">야구게임</span>
+                    <span class="en-text hidden"> Baseball Game</span>
+          </div>     
+       </div>
+       <div class="game-description-text">
+           <div class="ko-text">
+                  <strong> 비밀코드를 맞추는 퍼즐</strong><br>
                <div align="center">
-  <img src="images/moeum.jpeg" width="150" alt="Moeum Quiz - Korean vowel puzzle game where you guess hidden consonants"><br>
-</div>
-             </div>
-                <div class="en-text hidden">
-                    
-    <strong>Korean Hangman!</strong><br>
-                                <div align="center">
-  <img src="images/moeum.jpeg" width="150" alt="Moeum Quiz - Korean vowel puzzle game where you guess hidden consonants"><br>
-</div>
+  <img src="images/yagoo.png" width="150" alt="Bulls and Cows - Number and word guessing game"><br>
                 </div>
-            <div class="game-difficulty">
-                <span class="ko-text">모음퀴즈 하기</span>
-                <span class="en-text hidden">play Moeum-quiz</span>
+           </div>
+           <div class="en-text hidden">
+             <strong>Guess the secret code puzzle <br></strong>
+               <div align="center">
+  <img src="images/yagoo.png" width="150" alt="Bulls and Cows - Number and word guessing game"><br>
+               </div>
+           </div>
+           <div class="game-difficulty">
+                <span class="ko-text">야구 게임 하기</span>
+                <span class="en-text hidden">Play BaseBall Game</span>
+           </div>
+       </div>
+   </div>
+    
+<!-- 트링클 게임 -->
+   <div class="game-card" onclick="location.href='https://trinkle-opal.vercel.app'">
+       <div class="game-card-header">
+          <div class="game-emoji">👤 👥</div><br><br>
+              <div class="game-title">
+                   <button class="star-button">BEST</button>
+                   <span class="ko-text">트링클</span>
+                   <span class="en-text hidden">TRINKLE</span>
+              </div>
+          </div>
+          <div class="game-description-text">
+              <div class="ko-text">
+                    <strong>점과 점을 이어 삼각형을 그리세요.</strong><br>
+                  <div align="center">
+   <img src="images/trinkle.png" width="150" alt="Trinkle - Triangle strategy game connecting dots"><br>
+                  </div>
+              </div>
+              <div class="en-text hidden">
+                    <strong>Connect dots to form triangles </strong>
+                  <div align="center">
+   <img src="images/trinkle.png" width="150" alt="Trinkle - Triangle strategy game connecting dots"><br>
+                  </div>
+              </div>
+              <div class="game-difficulty">
+                <span class="ko-text">트링클 하기</span>
+                <span class="en-text hidden">play trinkle</span>
+              </div>
+         </div>
+    </div>
+
+<!-- 모음퀴즈 게임 -->
+   <div class="game-card" onclick="location.href='https://moeum-quiz.vercel.app'">
+       <div class="game-card-header">
+           <div class="game-emoji">👤</div>
+               <div class="game-title">
+                    <button class="star-button">BEST</button>
+                    <span class="ko-text">모음 퀴즈</span>
+                    <span class="en-text hidden"> Moeum quiz</span>
+               </div>
+           </div>
+           <div class="game-description-text">
+               <div class="ko-text">
+                    <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
+                   <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="Moeum Quiz - Korean vowel puzzle game where you guess hidden consonants"><br>
+                   </div>
+              </div>
+              <div class="en-text hidden">
+                    
+                    <strong>Korean Hangman!</strong><br>
+                  <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="Moeum Quiz - Korean vowel puzzle game where you guess hidden consonants"><br>
+                  </div>
+              </div>
+              <div class="game-difficulty">
+                   <span class="ko-text">모음퀴즈 하기</span>
+                   <span class="en-text hidden">play Moeum-quiz</span>
+              </div>
+         </div>
+    </div>
+
+<!-- 오목 게임 -->
+    <div class="game-card" onclick="location.href='https://omok-six.vercel.app'">
+        <div class="game-card-header">
+            <div class="game-emoji">👤 👥</div><br><br>
+            <div class="game-title">
+                  <span class="ko-text">오목</span>
+                  <span class="en-text hidden">OMOK</span>
             </div>
+         </div>
+         <div class="game-description-text">
+              <div class="ko-text">
+                  <strong> 돌 5개를 한 줄로 놓으면 이겨요.</strong><br>
+                  <div align="center">
+  <img src="images/omok.jpeg" width="150" alt="Omok - Five in a row strategy board game (Gomoku)"><br>
+                  </div>
+              </div>
+              <div class="en-text hidden">
+       <strong>Get 5 stones in a row to win!<br></strong>
+                  <div align="center">
+  <img src="images/omok.jpeg" width="150" alt="Omok - Five in a row strategy board game (Gomoku)"><br>
+                  </div>
+              </div>
+              <div class="game-difficulty">
+                   <span class="ko-text">오목 하기</span>
+                   <span class="en-text hidden">play Omok</span>
+              </div>
+         </div>
+     </div>
+
+<!-- 워퍼즈 게임 -->
+     <div class="game-card" onclick="location.href='https://worpuzz.vercel.app'">
+         <div class="game-card-header">
+             <div class="game-emoji">👤</div>
+             <div class="game-title">
+                    <span class="ko-text">워퍼즈  </span>
+                    <span class="en-text hidden">WORPUZZ </span>
+             </div>
+         </div>
+         <div class="game-description-text">
+             <div class="ko-text">
+                    <strong>격자 속에 숨어있는 단어를 찾으세요.</strong><br>
+                 <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzz - Word search puzzle game against computer"><br>
+                 </div>
+            </div> 
+            <div class="en-text hidden">
+                    <strong>Find hidden letters in the grid</strong><br>
+                 <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzz - Word search puzzle game against computer"><br>
+                 </div>
+            </div>
+            <div class="game-difficulty">
+                <span class="ko-text">워퍼즈 하기</span>
+                <span class="en-text hidden">play Worpuzz</span>
+            </div>
+       </div>  
+    </div>
+
+ 
+ <!-- 넘즐 게임 -->
+    <div class="game-card" onclick="location.href='https://numzzle.vercel.app'">
+        <div class="game-card-header">
+            <div class="game-emoji">👤</div>
+            <div class="game-title">
+                    <span class="ko-text">넘즐</span>
+                    <span class="en-text hidden">NUMZZLE</span>
+            </div>
+         </div>
+         <div class="game-description-text">
+             <div class="ko-text">
+                   <strong> 숫자 카드와 연산카드로 수식을 만들기 </strong><br>
+                 <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="Numzzle - Number puzzle challenge against computer"><br>
+                </div>
+            </div>
+            <div class="en-text hidden">
+                    <strong>Create equations using number and operation cards</strong><br>
+                <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="Numzzle - Number puzzle challenge against computer"><br>
+                </div>
+            </div>
+            <div class="game-difficulty">
+                <span class="ko-text">넘즐 하기</span>
+                <span class="en-text hidden">play Numzzle</span>
             </div>
         </div>
+    </div>
+
 <!-- 하루 모음 게임 -->
-        <div class="game-card" onclick="location.href='https://haru-seven.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👤</div>
-                <div class="game-title">
-                 <button class="star-button">BEST</button>
-                       <span class="ko-text">하루 모음</span>
+    <div class="game-card" onclick="location.href='https://haru-seven.vercel.app'">
+        <div class="game-card-header">
+            <div class="game-emoji">👤</div>
+            <div class="game-title">
+                    <span class="ko-text">하루 모음</span>
                     <span class="en-text hidden"> Haroo Moeum </span>
+            </div>
+        </div> 
+        <div class="game-description-text">
+            <div class="ko-text">
+                   <strong>오늘의 모음 퀴즈 </strong><br>
+                <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="Haru Moeum - Daily Korean vowel puzzle challenge"><br>
                 </div>
             </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-           <strong>오늘의 모음 퀴즈 </strong><br>
-               <div align="center">
-  <img src="images/moeum.jpeg" width="150" alt="Haru Moeum - Daily Korean vowel puzzle challenge"><br>
-</div>
-             </div>
-                <div class="en-text hidden">
+            <div class="en-text hidden">
                     <strong>Today's Moeum Quiz</strong><br>
-                                <div align="center">
+                <div align="center">
   <img src="images/moeum.jpeg" width="150" alt="Haru Moeum - Daily Korean vowel puzzle challenge"><br>
-</div>
                 </div>
+            </div>
             <div class="game-difficulty">
                 <span class="ko-text"> 하루 모음 하기</span>
                 <span class="en-text hidden">play Haroo Moeum</span>
             </div>
+        </div>
+    </div>
+    
+
+ <!-- 워퍼즈 메이트 게임 -->
+    <div class="game-card" onclick="location.href='https://worpuzzmate.vercel.app'">
+        <div class="game-card-header">
+            <div class="game-emoji">👥</div><br><br>
+            <div class="game-title">
+                    <span class="ko-text">워퍼즈 메이트 </span>
+                    <span class="en-text hidden">WORPUZZ MATE </span>
             </div>
         </div>
- <!-- 워퍼즈 게임 -->
-        <div class="game-card" onclick="location.href='https://worpuzz.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👤</div>
-                <div class="game-title">
-                     <button class="star-button">BEST</button>
-    <span class="ko-text">워퍼즈  </span>
-                    <span class="en-text hidden">WORPUZZ </span>
-                </div>      </div>
-            <div class="game-description-text">
-                <div class="ko-text">
+        <div class="game-description-text">
+            <div class="ko-text">
                     <strong>격자 속에 숨어있는 단어를 찾으세요.</strong><br>
-                <div align="center">
-  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzz - Word search puzzle game against computer"><br>
-</div> </div> <div class="en-text hidden">
-                    <strong>Find hidden letters in the grid</strong><br>
                  <div align="center">
-  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzz - Word search puzzle game against computer"><br>
-</div></div>
-            <div class="game-difficulty">
-                <span class="ko-text">워퍼즈 하기</span>
-                <span class="en-text hidden">play Worpuzz</span>
-            </div></div>   </div>
+  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzzmate - Two player competitive word search"><br>
+                 </div>
+             </div>
+             <div class="en-text hidden">
+                    <strong>Find hidden letters in the grid</strong><br>
+                  <div align="center">
+  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzzmate - Two player competitive word search"><br>
+                  </div>
+             </div>
+             <div class="game-difficulty">
+                <span class="ko-text">워퍼즈메이트 하기</span>
+                <span class="en-text hidden">play WorpuzzMate</span>
+         </div>
+     </div>
+   </div>
 
-<!-- 야구시리즈 -->
-   <div class="game-card" onclick="location.href='https://yagoo.vercel.app'">
-            <div class="game-card-header">
-              <div class="game-emoji">⚾</div><br><br>
-                <div class="game-title">
-                    <button class="star-button">NEW</button>
-                    <span class="ko-text">야구게임</span>
-                    <span class="en-text hidden"> Baseball Game</span>
-                </div>     </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-                   <strong> 비밀코드를 맞추는 퍼즐</strong><br>
-        <div align="center">
-  <img src="images/yagoo.png" width="150" alt="Bulls and Cows - Number and word guessing game"><br>
-</div></div>
-                <div class="en-text hidden">
-       <strong>Guess the secret code puzzle <br></strong>
-<div align="center">
-  <img src="images/yagoo.png" width="150" alt="Bulls and Cows - Number and word guessing game"><br>
-</div></div>
-<div class="game-difficulty">
-                <span class="ko-text">야구 게임 하기</span>
-                <span class="en-text hidden">Play BaseBall Game</span>
-            </div>      </div></div>
- 
-    <!-- 트링클 게임 -->
-        <div class="game-card" onclick="location.href='https://trinkle-opal.vercel.app'">
-            <div class="game-card-header">
-             <div class="game-emoji">👤 👥</div><br><br>
-                <div class="game-title">
-                   <span class="ko-text">트링클</span>
-                    <span class="en-text hidden">TRINKLE</span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-                    <strong>점과 점을 이어 삼각형을 그리세요.</strong><br>
-         <div align="center">
-  <img src="images/trinkle.png" width="150" alt="Trinkle - Triangle strategy game connecting dots"><br>
-</div>
-                     </div>
-                <div class="en-text hidden">
-                    <strong>Connect dots to form triangles </strong>
-<div align="center">
-  <img src="images/trinkle.png" width="150" alt="Trinkle - Triangle strategy game connecting dots"><br>
-</div>
-                </div>
-<div class="game-difficulty">
-                <span class="ko-text">트링클 하기</span>
-                <span class="en-text hidden">play trinkle</span>
-            </div>
             
-            </div>
-        </div>
-
-<!-- 오목 게임 -->
-   <div class="game-card" onclick="location.href='https://omok-six.vercel.app'">
-            <div class="game-card-header">
-              <div class="game-emoji">👤 👥</div><br><br>
-                <div class="game-title">
-                  <span class="ko-text">오목</span>
-                    <span class="en-text hidden">OMOK</span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-                   <strong> 돌 5개를 한 줄로 놓으면 이겨요.</strong><br>
-        <div align="center">
-  <img src="images/omok.jpeg" width="150" alt="Omok - Five in a row strategy board game (Gomoku)"><br>
-</div>
-          </div>
-                <div class="en-text hidden">
-       <strong>Get 5 stones in a row to win!<br></strong>
-<div align="center">
-  <img src="images/omok.jpeg" width="150" alt="Omok - Five in a row strategy board game (Gomoku)"><br>
-</div></div>
-<div class="game-difficulty">
-                <span class="ko-text">오목 하기</span>
-                <span class="en-text hidden">play Omok</span>
-            </div>
-            
-            </div>
-        </div>
-
-       
-            
-       
-<!-- 둘이 모음 게임 -->
-        <div class="game-card" onclick="location.href='https://doori-psi.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👥</div>
-                <div class="game-title">
+ <!-- 둘이 모음 게임 -->
+     <div class="game-card" onclick="location.href='https://doori-psi.vercel.app'">
+         <div class="game-card-header">
+             <div class="game-emoji">👥</div>
+             <div class="game-title">
                     <span class="ko-text">둘이 모음</span>
                     <span class="en-text hidden"> Doori Moeum </span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-           <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
-               <div align="center">
-  <img src="images/moeum.jpeg" width="150" alt="Doori Moeum - Two player Korean vowel guessing gamemoeum quiz"><br>
-</div>
              </div>
-                <div class="en-text hidden">
+         </div>
+         <div class="game-description-text">
+             <div class="ko-text">
+                     <strong>빈 자리에 자음을 넣어 완성하세요.</strong><br>
+                 <div align="center">
+  <img src="images/moeum.jpeg" width="150" alt="Doori Moeum - Two player Korean vowel guessing gamemoeum quiz"><br>
+                 </div>
+             </div>
+             <div class="en-text hidden">
                     <strong>Korean Hangman!</strong><br>
-                                <div align="center">
+                 <div align="center">
   <img src="images/moeum.jpeg" width="150" alt="Doori Moeum - Two player Korean vowel guessing game"><br>
-</div>
-                </div>
-            <div class="game-difficulty">
+                 </div>
+             </div>
+             <div class="game-difficulty">
                 <span class="ko-text">둘이 모음 하기</span>
                 <span class="en-text hidden">play Doori Moeum</span>
-            </div>
-            </div>
+             </div>
         </div>
+    </div>
 
-        <!-- 넘즐 게임 -->
-        <div class="game-card" onclick="location.href='https://numzzle.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👤</div>
-                <div class="game-title">
-                    <span class="ko-text">넘즐</span>
-                    <span class="en-text hidden">NUMZZLE</span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
+    
+ <!-- 넘플 게임 -->
+     <div class="game-card" onclick="location.href='https://numpple.vercel.app'">
+         <div class="game-card-header">
+             <div class="game-emoji">👥</div>
+             <div class="game-title">
+                    <span class="ko-text">넘플 </span>
+                    <span class="en-text hidden">NUMPPLE</span>
+             </div>
+         </div>
+         <div class="game-description-text">
+             <div class="ko-text">
                    <strong> 숫자 카드와 연산카드로 수식을 만들기 </strong><br>
-                   <div align="center">
-  <img src="images/numzzle.jpeg" width="150" alt="Numzzle - Number puzzle challenge against computer"><br>
-</div>
-                </div>
-                <div class="en-text hidden">
+                 <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="Numpple - Target number puzzle with math cards"><br>
+                 </div>
+             </div>
+             <div class="en-text hidden">
                     <strong>Create equations using number and operation cards</strong><br>
-<div align="center">
-  <img src="images/numzzle.jpeg" width="150" alt="Numzzle - Number puzzle challenge against computer"><br>
-</div>
-                </div>
-<div class="game-difficulty">
-                <span class="ko-text">넘즐 하기</span>
-                <span class="en-text hidden">play Numzzle</span>
-            </div>
-            
-            </div>
-        </div>
-    <!-- 넘털 게임 -->
-<div class="game-card" onclick="location.href='https://numtter.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👤</div>
-                <div class="game-title">
+                 <div align="center">
+  <img src="images/numzzle.jpeg" width="150" alt="Numpple - Target number puzzle with math cards"><br>
+                 </div>
+             </div>
+             <div class="game-difficulty">
+                <span class="ko-text">넘플 하기</span>
+                <span class="en-text hidden">play Numpple</span>
+             </div>
+         </div>
+     </div>
+  
+    
+ <!-- 넘털 게임 -->
+    <div class="game-card" onclick="location.href='https://numtter.vercel.app'">
+        <div class="game-card-header">
+            <div class="game-emoji">👤</div>
+            <div class="game-title">
+                    <button class="star-button">NEW</button>
                     <span class="ko-text">넘털 </span>
                     <span class="en-text hidden">NUMTTER</span>
-                </div>
             </div>
-<h2></h2>
-<div class="game-description">
-    
-</div>
-<div class="game-description-text">
-                <div class="ko-text">
+         </div>
+         <div class="game-description">
+         </div>
+         <div class="game-description-text">
+             <div class="ko-text">
                    <strong> 숫자카드를 다  털면 성공  </strong><br>
-   <div align="center">
+                 <div align="center">
   <img src="images/numzzle.jpeg" width="150" alt="Numtter - UNO style solo number card game"><br>
-</div>
-                 
- </div>
-                <div class="en-text hidden">
-                    <strong>Create equations using number and operation cards</strong><br>
-                     <div align="center">
+                 </div>
+             </div>
+             <div class="en-text hidden">
+                   <strong>Create equations using number and operation cards</strong><br>
+                 <div align="center">
   <img src="images/numzzle.jpeg" width="150" alt="Numtter - UNO style solo number card game"><br>
-</div>
-                </div>
-<div class="game-difficulty">
+                 </div>
+             </div>
+             <div class="game-difficulty">
                 <span class="ko-text">넘털 하기</span>
                 <span class="en-text hidden">play numtter</span>
             </div>
-            
-            </div>
         </div>
-
-        <!-- 넘플 게임 -->
-        <div class="game-card" onclick="location.href='https://numpple.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👥</div>
-                <div class="game-title">
-                    <span class="ko-text">넘플 </span>
-                    <span class="en-text hidden">NUMPPLE</span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-                   <strong> 숫자 카드와 연산카드로 수식을 만들기 </strong><br>
-                    <div align="center">
-  <img src="images/numzzle.jpeg" width="150" alt="Numpple - Target number puzzle with math cards"><br>
-</div>
-                </div>
-                <div class="en-text hidden">
-                    <strong>Create equations using number and operation cards</strong><br>
-                    <div align="center">
-  <img src="images/numzzle.jpeg" width="150" alt="Numpple - Target number puzzle with math cards"><br>
-</div>
-                </div>
-<div class="game-difficulty">
-                <span class="ko-text">넘플 하기</span>
-                <span class="en-text hidden">play Numpple</span>
-            </div>
-            
-            </div>
-        </div>
-  
-<!-- 워퍼즈 메이트 게임 -->
-        <div class="game-card" onclick="location.href='https://worpuzzmate.vercel.app'">
-            <div class="game-card-header">
-                <div class="game-emoji">👥</div><br><br>
-                <div class="game-title">
-                    <span class="ko-text">워퍼즈 메이트 </span>
-                    <span class="en-text hidden">WORPUZZ MATE </span>
-                </div>
-            </div>
-            <div class="game-description-text">
-                <div class="ko-text">
-                    <strong>격자 속에 숨어있는 단어를 찾으세요.</strong><br>
-                <div align="center">
-  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzzmate - Two player competitive word search"><br>
-</div>
-                     </div>
-                <div class="en-text hidden">
-                    <strong>Find hidden letters in the grid</strong><br>
-<div align="center">
-  <img src="images/worpuzz.jpeg" width="150" alt="Worpuzzmate - Two player competitive word search"><br>
-</div>
-                </div>
-            <div class="game-difficulty">
-                <span class="ko-text">워퍼즈메이트 하기</span>
-                <span class="en-text hidden">play WorpuzzMate</span>
-            </div>
-            </div>
-        </div>
-
+    </div>
  
 <!-- 게임 추천 테스트 카드 -->
     <div class="game-card test-card">
-<div class="game-card-header">
+        <div class="game-card-header">
             <div class="game-emoji">🎯</div>
             <div class="game-title ko-text">게임 추천 테스트</div>
             <div class="game-title en-text hidden">Game Recommendation Test</div>
@@ -965,7 +966,6 @@
             </div>
         </div>
 
- 
 <div class="test-buttons" id="navigationButtons">
     <button class="test-btn secondary" onclick="previousQuestion()" id="prevBtn" style="display: none;">
         <span class="ko-text">이전</span>
@@ -976,52 +976,40 @@
         <span class="en-text hidden">Next</span>
     </button>
 </div>
-       
-    </div>
+
+</div>
 </div>
 </div>
 
 <!-- 푸터 영역 -->
   <div class="footer">
-    
     <div class="ko-text">
 
-<span class="ko-text" onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">블로그</span>
-     |
-<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">유튜브</span>
-      |
-<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/News-ko.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">수수랜드 소식</span>
-    |
- <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;"> 수수랜드 운영원칙</span>|
-    <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">개인정보 처리방침</span>|
-            <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">연락처와 지원</span>|
-     <span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">개발자 협력</span>|
-     
-    <span onclick="location.href='game-contents.html'" style="cursor:pointer; text-decoration: underline;margin: 0 10px;">수수랜드 게임 목차</span>  
+<span class="ko-text" onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">블로그</span>|
+<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">유튜브</span>|
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/News-ko.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">수수랜드 소식</span>|
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;"> 수수랜드 운영원칙</span>|
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">개인정보 처리방침</span>|
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">연락처와 지원</span>|
+<span class="ko-text" onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;text-decoration: underline; margin: 0 10px;">개발자 협력</span>|
+<span onclick="location.href='game-contents.html'" style="cursor:pointer; text-decoration: underline;margin: 0 10px;">수수랜드 게임 목차</span>  
 <p>© 2025 한수수 . All rights reserved.</p><br>
     
-  </div>
+    </div>
 
-<div class="en-text hidden">
-<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">YouTube</span>
-      |
-        <span onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;"> Blog</span>|
-     <span onclick="location.href='https://soosoohan.github.io/soosooland/News-en.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Soosooland News</span>
-     |
-<span onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Operating Principles</span>
-   |
-        <span onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Privacy Policy</span>
-  |
- <span onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Contact & Support</span>
-  |    <span onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Developer Partnership</span>
-|<span onclick="location.href='game-contents-en.html'" style="cursor:pointer; text-decoration: underline;margin: 0 5px;">Soosooland Game Contents</span> | 
-
+    <div class="en-text hidden">
+<span onclick="location.href='https://youtube.com/@Soosooland2025'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">YouTube</span>|
+<span onclick="location.href='https://soosooland2025.blogspot.com'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;"> Blog</span>|
+<span onclick="location.href='https://soosoohan.github.io/soosooland/News-en.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Soosooland News</span>|
+<span onclick="location.href='https://soosoohan.github.io/soosooland/Opera.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Operating Principles</span>|
+<span onclick="location.href='https://soosoohan.github.io/soosooland/Priva.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Privacy Policy</span>|
+<span onclick="location.href='https://soosoohan.github.io/soosooland/Contact.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Contact & Support</span>|    
+<span onclick="location.href='https://soosoohan.github.io/soosooland/G1.html'" style="cursor:pointer;text-decoration: underline; margin: 0 5px;">Developer Partnership</span>|
+<span onclick="location.href='game-contents-en.html'" style="cursor:pointer; text-decoration: underline;margin: 0 5px;">Soosooland Game Contents</span> | 
 <br><br><p>© 2025 Soosoo Han . All rights reserved.</p> 
 
-</div>
-
-</div>
-        
+    </div>
+</div>        
 </div>
 <script>
   let currentQuestion = 1;
