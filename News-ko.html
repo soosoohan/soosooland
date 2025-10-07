@@ -75,6 +75,7 @@ transform: scale(0.95);
 <div class="wrap">
   <h1>📰 수수랜드의 기록</h1>
   <nav class="topnav">
+    <a href="#oct">2025년 10월</a>
     <a href="#sep">2025년 9월</a>
     <a href="#aug">2025년 8월</a>
     <a href="#jul">2025년 7월</a>
@@ -82,6 +83,24 @@ transform: scale(0.95);
   </nav>
 
   <!-- 9월 -->
+
+  <section class="card" id="oct">
+    <div class="section-title">2025년 10월 인기순위</div>
+    <table>
+      <thead><tr><th>순위</th><th>게임</th><th>순위변동</th></tr></thead>
+      <tbody id="octBody"></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <div class="section-title">📅 2025년 10월 연표</div>
+    <div class="timeline" id="sepTimeline"></div>
+  </section>
+
+  <button class="square-button" onclick="location.href='https://soosoohan.github.io/soosooland/'">
+    즐거운 퍼즐, 수수랜드
+  </button>
+ <!-- 9월 -->
 
   <section class="card" id="sep">
     <div class="section-title">2025년 9월 인기순위</div>
@@ -307,11 +326,13 @@ function drawAllTimeline() {
 // 모든 데이터 그리기
 function initializePage() {
   // 순위표 그리기
+  drawRankingTable("2025-10", "octBody", "2025-09");
   drawRankingTable("2025-09", "sepBody", "2025-08");
   drawRankingTable("2025-08", "augBody", "2025-07");
   drawRankingTable("2025-07", "julBody", null);
   
   // 월별 연표 그리기
+  drawTimeline("2025-10", "octTimeline");
   drawTimeline("2025-09", "sepTimeline");
   drawTimeline("2025-08", "augTimeline");
   drawTimeline("2025-07", "julTimeline");
