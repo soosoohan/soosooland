@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <!-- 메인 플랫폼 -->
-
   <url>
     <loc>https://soosooland.vercel.app</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
-
   <!-- 모음퀴즈 시리즈 (3종) -->
-
   <url>
     <loc>https://moeum-quiz.vercel.app</loc>
     <priority>0.8</priority>
@@ -27,25 +22,19 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <!-- 야구게임 -->
-
   <url>
     <loc>https://yagoo.vercel.app</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <!-- 트링클 -->
-
   <url>
     <loc>https://trinkle-opal.vercel.app</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <!-- 넘즐 시리즈 (5종) -->
-
   <url>
     <loc>https://numzzlex.vercel.app</loc>
     <priority>0.8</priority>
@@ -71,9 +60,7 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <!-- 워퍼즈 시리즈 (5종) -->
-
   <url>
     <loc>https://worpuzz.vercel.app</loc>
     <priority>0.8</priority>
@@ -99,13 +86,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <!-- 오목 -->
-
   <url>
     <loc>https://omok-six.vercel.app</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
 </urlset>
