@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=https://soosooland.com">
+    <link rel="canonical" href="https://soosooland.com">
+    <title>수수랜드 - 새 집으로 이사했어요!</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #145454 0%, #2e8b8b 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .container {
+        max-width: 700px;
+        animation: fadeIn 1s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    h1 {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    h2 {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        font-weight: 600;
+        margin-bottom: 40px;
+        opacity: 0.95;
+        line-height: 1.3;
+    }
+    
+    .old-address {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        opacity: 0.6;
+        margin: 20px 0;
+        line-height: 1.8;
+    }
+    
+    .arrow {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);\
+        margin: 20px 0;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.7; }
+    }
+    
+    .new-address {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        color: #ffeb3b;
+        font-weight: bold;
+        margin: 30px 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        line-height: 1.4;
+    }
+    
+    .explanation {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        line-height: 1.8;
+        margin: 30px 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+    }
+    
+    .explanation strong {
+        color: #ffeb3b;
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+    }
+    
+    .teleport-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #ffeb3b 0%, #ffc107 100%);
+        color: #145454;
+        padding: clamp(15px, 4vw, 25px) clamp(40px, 8vw, 70px);
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        font-weight: bold;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: 30px 0;
+        box-shadow: 0 8px 25px rgba(255, 235, 59, 0.5);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .teleport-button:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 35px rgba(255, 235, 59, 0.7);
+    }
+    
+    .countdown {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        margin-top: 30px;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        line-height: 1.6;
+    }
+    
+    .countdown-number {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        color: #ffeb3b;
+        font-weight: bold;
+        display: inline-block;
+        min-width: 60px;
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+        
+        .container {
+            padding: 10px;
+        }
+        
+        .explanation {
+            padding: 15px;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        
+    <h1>새 주소로 이사했어요! 🎉</h1>
+    <h2>We've moved to a new home!</h2>
+    
+    <div class="old-address">
+        ❌soosoohan.github.io/soosooland❌<br>
+        ❌soosooland.vercel.app❌
+    </div>
+    
+    <div class="arrow">⬇️</div>
+    
+    <div class="new-address">
+        ✅ soosooland.com<br>
+        </div>
+   
+<div class="countdown">
+        
+<span class="countdown-number" id="counter">5</span> 초 후 새 주소로 이동합니다.<br> <br> You will be redirected to the new home in <span class="countdown-number" id="counter2">5</span> seconds.<br><br>
+        <br>
+         </div>
+    </div>
+    
+</div>
+
+<script>
+    let count = 5;
+    const counter1 = document.getElementById('counter');
+    const counter2 = document.getElementById('counter2');
+    
+    const interval = setInterval(() => {
+        count--;
+        counter1.textContent = count;
+        counter2.textContent = count;
+        if (count <= 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+    
+    setTimeout(() => {
+        window.location.href = "https://soosooland.com";
+    }, 5000);
+</script>
+
+</body>
+</html>
