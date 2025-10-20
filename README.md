@@ -31,7 +31,7 @@ It offers a wide range of word, logic, strategy, and math games—perfect for ch
 
 > "Learning through fun, and fun through learning."
 
-Explore more brain games and puzzles in **[Soosooland](https://soosooland.com)**    
+Explore more brain games and puzzles in **[Soosooland](https://soosooland.com/)**    
 — a digital playground designed to improve memory, logic, and creativity while having fun!
 
 ---
