@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://soosooland.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/sitemap.xml",
