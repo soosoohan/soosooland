@@ -27,7 +27,7 @@ Introducing the Online Educational & Brain Development Game Platform, Soosoland.
 Soosoland is an educational and brain-training game platform that runs directly on your browser without any downloads.  
 It offers a wide range of word, logic, strategy, and math games—perfect for children’s learning and for adults’ brain health.  
    
-   ## 🌟 Soosooland - Game  by Han Soosoo
+   ## 🌟 Soosooland -  Puzzle Game  by Han Soosoo
 
 > "Learning through fun, and fun through learning."
 
