@@ -1,7 +1,8 @@
-# ⚠️ 안내
-본 저장소의 소스코드와 자료는 작성자의 허락 없이 **복사·수정·배포·상업적 이용**할 수 없습니다.  
-이 저장소는 오픈소스가 아니며, 교육 및 참고 목적으로만 열람 가능합니다.
+## ⚠️ Copyright Notice | 저작권 안내 | کاپی رائٹ نوٹس  
 
+All games are registered copyrights. Unauthorized copying or redistribution is prohibited.  
+모든 게임은 저작권 등록된 창작물입니다. 무단 복제 및 배포를 금합니다.  
+تمام گیمز کاپی رائٹ محفوظ ہیں۔ غیر مجاز نقل ممنوع ہے۔
 # Soosoo Land
 수수랜드는 저작권을 존중하며, 교육·두뇌개발 게임을 함께 나누는 플랫폼입니다.    
 Soosooland respects copyright and serves as a platform for sharing educational and brain-training games.   
